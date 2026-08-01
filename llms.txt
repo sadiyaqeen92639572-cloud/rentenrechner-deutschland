@@ -1,4 +1,4 @@
-# rentenrechner-deutschland.de
+# rentenrechner-deutschland.com
 
 > Kostenloser Rentenrechner für Deutschland: Bruttorente in Nettorente umrechnen, Regelaltersgrenze nach Geburtsjahr, Rente mit 63 ohne Abschlag. Keine Registrierung, keine E-Mail nötig.
 
@@ -39,5 +39,5 @@ Diese Berechnungen sind unverbindliche Schätzungen, keine Steuer- oder Rechtsbe
 
 ## Kontakt / Herausgeber
 
-Site: https://rentenrechner-deutschland.de/
+Site: https://rentenrechner-deutschland.com/
 Herausgeber: Gesmine-Invest Limited (UK company 14120136)
