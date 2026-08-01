@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentenrechner mit Betriebsrente 2026 — KVdR-Freibetrag berechnen</title>
+<meta name="description" content="Rentenrechner mit Betriebsrente: wie wirkt sich der KVdR-Freibetrag (197,75€) auf deine Betriebsrente aus? Krankenversicherung vs. Pflegeversicherung — unterschiedliche Regeln erklärt + Rechner.">
+<meta name="keywords" content="rentenrechner netto mit betriebsrente, steuerrechner rente und betriebsrente, rentenrechner brutto netto mit betriebsrente">
+<link rel="canonical" href="https://rentenrechner-deutschland.de/betriebsrente/">
+<meta property="og:title" content="Rentenrechner mit Betriebsrente 2026">
+<meta property="og:description" content="KVdR-Freibetrag (197,75€) auf Betriebsrente berechnen — Kranken- vs. Pflegeversicherung unterschiedlich behandelt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.de/betriebsrente/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Rentenrechner mit Betriebsrente",
+      "url": "https://rentenrechner-deutschland.de/betriebsrente/",
+      "description": "Rechner für den KVdR-Freibetrag auf Betriebsrenten 2026 und die abweichende Behandlung in der Pflegeversicherung (Freigrenze statt Freibetrag).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "areaServed": { "@type": "Country", "name": "Germany" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie hoch ist der Freibetrag für Betriebsrenten 2026?", "acceptedAnswer": { "@type": "Answer", "text": "197,75€ pro Monat in der Krankenversicherung der Rentner (KVdR). Nur der Betrag, der diese Grenze übersteigt, ist beitragspflichtig — und das nur für KVdR-Pflichtversicherte, nicht für freiwillig gesetzlich Versicherte." } },
+        { "@type": "Question", "name": "Gilt der Freibetrag auch für die Pflegeversicherung?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, hier gilt eine Freigrenze statt eines Freibetrags: sobald deine Betriebsrente die Grenze überschreitet, wird die GESAMTE Betriebsrente beitragspflichtig zur Pflegeversicherung — nicht nur der übersteigende Teil. Das ist ein wichtiger Unterschied zur Krankenversicherung." } },
+        { "@type": "Question", "name": "Warum ist der Beitragssatz auf Betriebsrente höher als auf die gesetzliche Rente?", "acceptedAnswer": { "@type": "Answer", "text": "Bei der gesetzlichen Rente zahlt die Deutsche Rentenversicherung die Hälfte des Krankenversicherungsbeitrags. Bei einer Betriebsrente gibt es keinen vergleichbaren Träger, der die andere Hälfte übernimmt — der Rentner zahlt den vollen allgemeinen Beitragssatz plus vollen Zusatzbeitrag (2026 zusammen ca. 17,5%) auf den Betrag über dem Freibetrag." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.de/" },
+        { "@type": "ListItem", "position": 2, "name": "Betriebsrente", "item": "https://rentenrechner-deutschland.de/betriebsrente/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand: #1a1a1a; --brand-dark: #000; --brand-light: #fef3d5; --gold: #ffce00; --red: #dd0000; --success: #16a34a; --success-light: #dcfce7; --warn: #b45309; --warn-light: #fef3c7; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --bg: #f8fafc; --radius: 12px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--red) 100%); color: white; padding: 44px 20px 76px; text-align: center; }
+  header a.back { color: white; display: block; margin-bottom: 10px; }
+  header h1 { font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 800; margin-bottom: 10px; }
+  header p { color: rgba(255,255,255,.9); font-size: 0.98rem; max-width: 620px; margin: 0 auto; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+  .tool-wrapper { margin: -44px auto 24px; position: relative; z-index: 10; }
+  .tool-card { background: white; border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid var(--border); padding: 30px 26px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } .tool-card { padding: 20px 16px; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  label { font-size: 0.9rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+  input[type=number] { border: 2px solid var(--border); border-radius: 8px; padding: 12px 14px; font-size: 1rem; width: 100%; }
+  input[type=number]:focus { outline: none; border-color: var(--brand-dark); }
+  .calc-btn { width: 100%; margin-top: 22px; padding: 16px; background: var(--brand-dark); color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .calc-btn:hover { background: #333; }
+  .result-box { margin-top: 24px; padding: 22px; border-radius: var(--radius); background: var(--success-light); border: 2px solid var(--success); display: none; }
+  .result-box.show { display: block; }
+  .result-headline { font-size: 1.5rem; font-weight: 800; color: var(--success); margin-bottom: 6px; }
+  .result-sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
+  .breakdown { display: grid; gap: 8px; font-size: 0.92rem; }
+  .breakdown-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .breakdown-row.total { font-weight: 800; border-bottom: none; padding-top: 10px; }
+  .warn-box { background: var(--warn-light); border: 2px solid var(--warn); border-radius: var(--radius); padding: 16px 18px; margin-top: 16px; font-size: 0.9rem; color: #78350f; }
+  section.content { padding: 20px 0 40px; }
+  section.content h2 { font-size: 1.3rem; color: var(--brand-dark); margin: 32px 0 12px; }
+  section.content h2:first-child { margin-top: 0; }
+  section.content p { margin-bottom: 12px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+  footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="/">← Zurück zum Rentenrechner</a>
+  <h1>🇩🇪 Rentenrechner mit Betriebsrente</h1>
+  <p>KVdR-Freibetrag (197,75€) auf Betriebsrente berechnen — Kranken- und Pflegeversicherung unterschiedlich behandelt.</p>
+</header>
+
+<div class="container">
+<div class="tool-wrapper">
+  <div class="tool-card">
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Betriebsrente <span>(€/Monat)</span></label>
+        <input type="number" id="br-betrieb" placeholder="z.B. 350" min="0" step="1">
+      </div>
+      <div class="form-group">
+        <label>Kinderlos?</label>
+        <input type="checkbox" id="br-kinderlos" style="width:20px;height:20px;margin-top:8px;">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcBR()">Beiträge berechnen</button>
+    <div class="result-box" id="br-result">
+      <div class="result-headline" id="br-headline"></div>
+      <div class="result-sub" id="br-sub"></div>
+      <div class="breakdown" id="br-breakdown"></div>
+    </div>
+    <div class="warn-box">
+      <strong>Nur KVdR-Pflichtversicherte:</strong> Dieser Freibetrag gilt ausschließlich für Rentner, die pflichtversichert in der Krankenversicherung der Rentner sind. Freiwillig gesetzlich Versicherte zahlen ab dem ersten Euro Betriebsrente den vollen Beitrag — nicht in diesem Rechner abgebildet.
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<section class="content">
+
+  <h2>Freibetrag (Krankenversicherung) vs. Freigrenze (Pflegeversicherung)</h2>
+  <p><strong>Krankenversicherung:</strong> echter Freibetrag — von deiner Betriebsrente werden 197,75€ abgezogen, nur der Rest ist beitragspflichtig (voller Satz 2026: ca. 17,5%, da keine hälftige Übernahme wie bei der gesetzlichen Rente).</p>
+  <p><strong>Pflegeversicherung:</strong> Freigrenze, kein Freibetrag — sobald deine Betriebsrente 197,75€ übersteigt, wird die GESAMTE Betriebsrente beitragspflichtig (3,6% bzw. 4,2% für Kinderlose), nicht nur der übersteigende Teil. Das führt bei knapper Überschreitung zu einem spürbaren Sprung.</p>
+
+  <h2>Was dieser Rechner NICHT abbildet</h2>
+  <p>Steuerliche Behandlung der Betriebsrente (abhängig vom Durchführungsweg: Direktversicherung, Pensionskasse, Pensionsfonds, Direktzusage, Unterstützungskasse — jeweils unterschiedlich versteuert) sowie Fälle mit mehreren Betriebsrenten (die Freibeträge werden dann zusammengerechnet, nicht pro Vertrag gewährt). Für diese Fälle: Steuerberater oder Krankenkasse konsultieren.</p>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+</section>
+</div>
+
+<footer>
+  <nav><a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a></nav>
+  <p>© 2026 Gesmine-Invest Limited. Unverbindliche Schätzung — keine Steuerberatung.</p>
+</footer>
+
+<script>
+  // ZENTRALE KONSTANTE — Betriebsrente-spezifisch, siehe research/sourcing-tracker.csv
+  const BR_FREIBETRAG_KV_2026 = 197.75;
+  const BR_KV_VOLLER_SATZ = 0.146 + 0.029; // 17,5% — voller Satz, kein DRV-Anteil wie bei gesetzlicher Rente
+  const BR_PFLEGE_SATZ = 0.036;
+  const BR_PFLEGE_ZUSCHLAG_KINDERLOS = 0.006;
+  function eur(n) { return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+
+  function calcBR() {
+    const betrieb = parseFloat(document.getElementById('br-betrieb').value);
+    const kinderlos = document.getElementById('br-kinderlos').checked;
+    if (!betrieb || betrieb <= 0) { alert('Bitte Betriebsrente eingeben.'); return; }
+
+    // KV: Freibetrag — nur Betrag über 197,75€ beitragspflichtig
+    const kvBemessung = Math.max(0, betrieb - BR_FREIBETRAG_KV_2026);
+    const kvBeitrag = kvBemessung * BR_KV_VOLLER_SATZ;
+
+    // Pflege: Freigrenze — bei Überschreiten wird GESAMTER Betrag beitragspflichtig
+    const pflegeSatz = BR_PFLEGE_SATZ + (kinderlos ? BR_PFLEGE_ZUSCHLAG_KINDERLOS : 0);
+    const ueberschritten = betrieb > BR_FREIBETRAG_KV_2026;
+    const pflegeBeitrag = ueberschritten ? betrieb * pflegeSatz : 0;
+
+    const netto = betrieb - kvBeitrag - pflegeBeitrag;
+
+    document.getElementById('br-headline').textContent = eur(netto) + ' / Monat';
+    document.getElementById('br-sub').textContent = ueberschritten
+      ? `Freibetrag (197,75€) überschritten — Pflegeversicherung auf die GESAMTE Betriebsrente fällig.`
+      : `Unter dem Freibetrag (197,75€) — keine Pflegeversicherung fällig, KV-Beitrag ${kvBemessung > 0 ? 'nur auf den übersteigenden Teil' : 'entfällt vollständig'}.`;
+    document.getElementById('br-breakdown').innerHTML = `
+      <div class="breakdown-row"><span>Betriebsrente</span><span>${eur(betrieb)}</span></div>
+      <div class="breakdown-row"><span>− KV (auf ${eur(kvBemessung)} über Freibetrag, ${(BR_KV_VOLLER_SATZ*100).toFixed(1)}%)</span><span>${eur(kvBeitrag)}</span></div>
+      <div class="breakdown-row"><span>− Pflege (${ueberschritten ? 'auf GESAMTEN Betrag, '+(pflegeSatz*100).toFixed(1)+'%' : 'entfällt'})</span><span>${eur(pflegeBeitrag)}</span></div>
+      <div class="breakdown-row total"><span>Netto Betriebsrente</span><span>${eur(netto)}</span></div>
+    `;
+    document.getElementById('br-result').classList.add('show');
+  }
+
+  const FAQ_ITEMS = [
+    ["Wie hoch ist der Freibetrag für Betriebsrenten 2026?", "197,75€ pro Monat in der Krankenversicherung der Rentner (KVdR). Nur der Betrag, der diese Grenze übersteigt, ist beitragspflichtig — und das nur für KVdR-Pflichtversicherte, nicht für freiwillig gesetzlich Versicherte."],
+    ["Gilt der Freibetrag auch für die Pflegeversicherung?", "Nein, hier gilt eine Freigrenze statt eines Freibetrags: sobald deine Betriebsrente die Grenze überschreitet, wird die GESAMTE Betriebsrente beitragspflichtig zur Pflegeversicherung — nicht nur der übersteigende Teil. Das ist ein wichtiger Unterschied zur Krankenversicherung."],
+    ["Warum ist der Beitragssatz auf Betriebsrente höher als auf die gesetzliche Rente?", "Bei der gesetzlichen Rente zahlt die Deutsche Rentenversicherung die Hälfte des Krankenversicherungsbeitrags. Bei einer Betriebsrente gibt es keinen vergleichbaren Träger, der die andere Hälfte übernimmt — der Rentner zahlt den vollen allgemeinen Beitragssatz plus vollen Zusatzbeitrag (2026 zusammen ca. 17,5%) auf den Betrag über dem Freibetrag."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+</script>
+</body>
+</html>

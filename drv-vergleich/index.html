@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentenrechner DRV — Unterschied zum offiziellen Rechner der Deutschen Rentenversicherung</title>
+<meta name="description" content="Was ist der Unterschied zwischen diesem Rentenrechner und dem offiziellen Rechner der Deutschen Rentenversicherung (DRV)? Wann welchen nutzen, direkter Link zum DRV-Tool.">
+<meta name="keywords" content="rentenrechner drv, deutsche rentenversicherung rentenrechner, rentenrechner der deutschen rentenversicherung">
+<link rel="canonical" href="https://rentenrechner-deutschland.de/drv-vergleich/">
+<meta property="og:title" content="Rentenrechner DRV — Unterschied zum offiziellen Rechner">
+<meta property="og:description" content="Wann den offiziellen DRV-Rechner nutzen, wann diese Schnellschätzung reicht.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.de/drv-vergleich/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist der Unterschied zwischen diesem Rechner und dem DRV-Rentenrechner?", "acceptedAnswer": { "@type": "Answer", "text": "Der offizielle Rechner der Deutschen Rentenversicherung greift auf dein individuelles Versicherungskonto zu (tatsächliche Beitragsjahre, Entgeltpunkte, Zeiten) und liefert eine verbindliche Prognose deiner Rentenhöhe. Dieser Rechner nutzt nur die von dir eingegebenen Werte (angenommene Bruttorente, Geburtsjahr) und die öffentlichen Sätze (KVdR, Pflege, Steuer) — schnell für eine grobe Schätzung, aber ohne Zugriff auf dein Konto." } },
+        { "@type": "Question", "name": "Wo finde ich den offiziellen Rentenrechner der DRV?", "acceptedAnswer": { "@type": "Answer", "text": "Über die Renteninformation (jährlich per Post) oder online über das persönliche Konto bei „Meine Rente“ (eservice-drv.de) — dafür ist eine Registrierung mit ELSTER-Zertifikat oder Online-Ausweisfunktion nötig." } },
+        { "@type": "Question", "name": "Wann reicht dieser Rechner, wann sollte ich zur DRV?", "acceptedAnswer": { "@type": "Answer", "text": "Für eine schnelle Orientierung zu Netto-Abzügen (KVdR, Pflege, Steuer) bei einer angenommenen Bruttorente, oder zur Regelaltersgrenze/Rente mit 63 nach Geburtsjahr, reicht dieser Rechner. Für die tatsächliche Höhe deiner künftigen Rente (abhängig von deinem realen Erwerbsverlauf) ist ausschließlich die DRV-Auskunft verbindlich." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.de/" },
+        { "@type": "ListItem", "position": 2, "name": "DRV-Vergleich", "item": "https://rentenrechner-deutschland.de/drv-vergleich/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand: #1a1a1a; --brand-dark: #000; --brand-light: #fef3d5; --gold: #ffce00; --red: #dd0000; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --bg: #f8fafc; --radius: 12px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--red) 100%); color: white; padding: 44px 20px; text-align: center; }
+  header a.back { color: white; display: block; margin-bottom: 10px; }
+  header h1 { font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 800; margin-bottom: 10px; }
+  header p { color: rgba(255,255,255,.9); font-size: 0.98rem; max-width: 620px; margin: 0 auto; }
+  .container { max-width: 780px; margin: 0 auto; padding: 30px 20px 40px; }
+  h2 { font-size: 1.3rem; color: var(--brand-dark); margin: 32px 0 12px; }
+  h2:first-child { margin-top: 0; }
+  p { margin-bottom: 12px; }
+  table.compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; background: white; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+  table.compare-table th, table.compare-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  table.compare-table th { background: #f3f4f6; font-weight: 700; }
+  .cta-box { background: var(--brand-light); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; }
+  .cta-box strong { display: block; margin-bottom: 6px; color: var(--brand-dark); }
+  .cta-box a { color: var(--brand-dark); font-weight: 700; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+  footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="/">← Zurück zum Rentenrechner</a>
+  <h1>🇩🇪 Rentenrechner DRV — Vergleich</h1>
+  <p>Was ist der Unterschied zwischen diesem Rechner und dem offiziellen Rechner der Deutschen Rentenversicherung?</p>
+</header>
+
+<div class="container">
+
+  <h2>Im Überblick</h2>
+  <table class="compare-table">
+    <thead><tr><th></th><th>Dieser Rechner</th><th>DRV-Rechner ("Meine Rente")</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Zugang</strong></td><td>Sofort, keine Anmeldung</td><td>Registrierung nötig (ELSTER-Zertifikat oder Online-Ausweis)</td></tr>
+      <tr><td><strong>Datenbasis</strong></td><td>Von dir eingegebene Annahmen</td><td>Dein tatsächliches Versicherungskonto (Entgeltpunkte, Zeiten)</td></tr>
+      <tr><td><strong>Ergebnis</strong></td><td>Grobe Schätzung Netto-Abzüge</td><td>Verbindliche individuelle Prognose</td></tr>
+      <tr><td><strong>Geeignet für</strong></td><td>Schnellorientierung, Vergleich verschiedener Szenarien</td><td>Tatsächliche Rentenplanung</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Warum beide nützlich sind</h2>
+  <p>Der offizielle DRV-Rechner beantwortet "wie hoch wird meine Rente" — basierend auf deinem echten Erwerbsverlauf. Dieser Rechner beantwortet "was bleibt netto übrig, wenn meine Rente X€ beträgt" — unabhängig davon, woher die X€ kommen. Beide Fragen sind unterschiedlich und ergänzen sich: erst die DRV für die Bruttohöhe, dann hier für die Netto-Schätzung.</p>
+
+  <div class="cta-box">
+    <strong>Offizieller Rechner der Deutschen Rentenversicherung</strong>
+    <span>Für eine verbindliche individuelle Prognose: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Online-Dienste/meine-rente_node.html" rel="noopener" target="_blank">Meine Rente (eservice-drv.de)</a> oder <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Beratung/Beratung_und_Auskunft/Beratungsstellensuche/beratungsstellensuche_node.html" rel="noopener" target="_blank">Beratungsstellensuche</a>.</span>
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+</div>
+
+<footer>
+  <nav><a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a></nav>
+  <p>© 2026 Gesmine-Invest Limited. Unverbindliche Information — keine Rechtsberatung.</p>
+</footer>
+
+<script>
+  const FAQ_ITEMS = [
+    ["Was ist der Unterschied zwischen diesem Rechner und dem DRV-Rentenrechner?", "Der offizielle Rechner der Deutschen Rentenversicherung greift auf dein individuelles Versicherungskonto zu (tatsächliche Beitragsjahre, Entgeltpunkte, Zeiten) und liefert eine verbindliche Prognose deiner Rentenhöhe. Dieser Rechner nutzt nur die von dir eingegebenen Werte (angenommene Bruttorente, Geburtsjahr) und die öffentlichen Sätze (KVdR, Pflege, Steuer) — schnell für eine grobe Schätzung, aber ohne Zugriff auf dein Konto."],
+    ["Wo finde ich den offiziellen Rentenrechner der DRV?", "Über die Renteninformation (jährlich per Post) oder online über das persönliche Konto bei „Meine Rente\" (eservice-drv.de) — dafür ist eine Registrierung mit ELSTER-Zertifikat oder Online-Ausweisfunktion nötig."],
+    ["Wann reicht dieser Rechner, wann sollte ich zur DRV?", "Für eine schnelle Orientierung zu Netto-Abzügen (KVdR, Pflege, Steuer) bei einer angenommenen Bruttorente, oder zur Regelaltersgrenze/Rente mit 63 nach Geburtsjahr, reicht dieser Rechner. Für die tatsächliche Höhe deiner künftigen Rente (abhängig von deinem realen Erwerbsverlauf) ist ausschließlich die DRV-Auskunft verbindlich."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+</script>
+</body>
+</html>

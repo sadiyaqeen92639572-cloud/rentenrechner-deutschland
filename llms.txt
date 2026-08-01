@@ -1,0 +1,43 @@
+# rentenrechner-deutschland.de
+
+> Kostenloser Rentenrechner für Deutschland: Bruttorente in Nettorente umrechnen, Regelaltersgrenze nach Geburtsjahr, Rente mit 63 ohne Abschlag. Keine Registrierung, keine E-Mail nötig.
+
+Diese Website berechnet deutsche gesetzliche Renten-Kennzahlen (Sozialversicherungsrecht/Steuerrecht) nach offiziellen Sätzen der Deutschen Rentenversicherung (DRV) und des Bundesfinanzministeriums (BMF). Kein Backend, keine Datenspeicherung: alle Berechnungen laufen client-side (JavaScript).
+
+## Regelaltersgrenze (§§ 35, 235 SGB VI)
+
+Geburtsjahrgänge bis 1946: 65 Jahre. Ab 1947 schrittweise Anhebung (+1 Monat/Jahrgang bis 1958, danach +2 Monate/Jahrgang) bis 67 Jahre für Jahrgang 1964 und später. Vollständige Tabelle implementiert, geprüft am 1. August 2026.
+
+## Altersrente für besonders langjährig Versicherte / "Rente mit 63" (§ 38 SGB VI)
+
+Mindestens 45 Beitragsjahre erforderlich. Geburtsjahrgänge bis 1952: abschlagsfreier Bezug ab 63 Jahren. Ab 1953 schrittweise Anhebung (+2 Monate/Jahrgang) bis 65 Jahre für Jahrgang 1964 und später.
+
+## Abschlag bei vorzeitigem Rentenbezug (§ 77 SGB VI)
+
+0,3% der Rente pro Monat vorzeitigen Bezugs, lebenslang, maximal 14,4% (48 Monate / 4 Jahre).
+
+## Besteuerungsanteil der Rente (§ 22 Nr. 1 Satz 3 Buchst. a EStG)
+
+Steuerpflichtiger Anteil der Bruttorente nach Rentenbeginnjahr: 50% bis 2005, +2 Prozentpunkte/Jahr 2006–2020 (80% in 2020), +1 Punkt/Jahr 2021–2022 (82% in 2022), seit Wachstumschancengesetz (27.03.2024, rückwirkend ab 2023) nur noch +0,5 Punkte/Jahr — 84% bei Rentenbeginn 2026, 100% erst ab Rentenbeginn 2058.
+
+## Krankenversicherung der Rentner (KVdR)
+
+Rentner-Eigenanteil: 7,3% (halber allgemeiner Beitragssatz von 14,6%) + die Hälfte des kassenindividuellen Zusatzbeitrags (Durchschnitt 2026: 2,9%, also 1,45% Eigenanteil).
+
+## Pflegeversicherung für Rentner (§ 55 SGB XI)
+
+3,6% der Bruttorente, voll vom Rentner getragen. Kinderlose (ab 23 Jahren, kein Kindernachweis): +0,6 Prozentpunkte Zuschlag = 4,2%.
+
+## Nicht modelliert (bewusster Gap, kein fehlender Wert)
+
+- Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)
+- Betriebsrenten-KVdR-Freibetrag im Detail (eigene Seite /betriebsrente/, Forschung teilweise offen — siehe research/sourcing-tracker.csv)
+
+## Warnung
+
+Diese Berechnungen sind unverbindliche Schätzungen, keine Steuer- oder Rechtsberatung (§ 2 StBerG). Für eine verbindliche Entscheidung: Steuerberater oder Deutsche Rentenversicherung konsultieren.
+
+## Kontakt / Herausgeber
+
+Site: https://rentenrechner-deutschland.de/
+Herausgeber: Gesmine-Invest Limited (UK company 14120136)

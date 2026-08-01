@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentenrechner 2026 — Rente Netto berechnen, Regelaltersgrenze & Rente mit 63</title>
+<meta name="description" content="Kostenloser Rentenrechner: Bruttorente in Nettorente umrechnen (KVdR, Pflegeversicherung, Steuer), Regelaltersgrenze nach Geburtsjahr prüfen, Rente mit 63 ohne Abschlag berechnen. Keine Anmeldung, Ergebnis sofort.">
+<meta name="keywords" content="rentenrechner, rentenrechner brutto netto, rentenrechner netto, rentenrechner steuern, rentenrechner tabelle, rentenrechner drv, rente mit 63, regelaltersgrenze">
+<link rel="canonical" href="https://rentenrechner-deutschland.de/">
+<meta property="og:title" content="Rentenrechner 2026 — Kostenlos Rente Netto berechnen">
+<meta property="og:description" content="Bruttorente in Nettorente umrechnen, Regelaltersgrenze prüfen, Rente mit 63 ohne Abschlag berechnen. Gratis, keine Registrierung.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.de/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Rentenrechner Deutschland",
+      "url": "https://rentenrechner-deutschland.de/",
+      "legalName": "Gesmine-Invest Limited",
+      "identifier": { "@type": "PropertyValue", "propertyID": "UK Company Number", "value": "14120136" },
+      "address": { "@type": "PostalAddress", "streetAddress": "Hardy House, 269 Poynders Gardens", "addressLocality": "London", "postalCode": "SW4 8PQ", "addressCountry": "GB" }
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Rentenrechner 2026",
+      "url": "https://rentenrechner-deutschland.de/",
+      "description": "Rechner für Bruttorente/Nettorente, Regelaltersgrenze nach Geburtsjahr und Rente mit 63 (besonders langjährig Versicherte), basierend auf den offiziellen Werten der Deutschen Rentenversicherung und des Bundesfinanzministeriums.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "areaServed": { "@type": "Country", "name": "Germany" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie berechnet man die Nettorente aus der Bruttorente?", "acceptedAnswer": { "@type": "Answer", "text": "Von der Bruttorente werden der Eigenanteil zur Krankenversicherung der Rentner (KVdR, 7,3% + halber Zusatzbeitrag der Kasse), der volle Beitrag zur Pflegeversicherung (3,6%, Kinderlose 4,2%) sowie ggf. Einkommensteuer auf den steuerpflichtigen Anteil der Rente abgezogen. Der steuerpflichtige Anteil hängt vom Jahr des Rentenbeginns ab (Besteuerungsanteil)." } },
+        { "@type": "Question", "name": "Was ist der Besteuerungsanteil der Rente?", "acceptedAnswer": { "@type": "Answer", "text": "Der Besteuerungsanteil legt fest, wie viel Prozent der Bruttorente steuerpflichtig sind. Er hängt vom Jahr des Rentenbeginns ab: 50% bei Rentenbeginn bis 2005, steigend um 2 Prozentpunkte pro Jahr bis 2020 (80%), dann 1 Punkt/Jahr bis 2022 (82%), seit dem Wachstumschancengesetz 2024 nur noch 0,5 Punkte/Jahr — 84% bei Rentenbeginn 2026, 100% erst ab Rentenbeginn 2058." } },
+        { "@type": "Question", "name": "Muss ich als Rentner überhaupt Steuern zahlen?", "acceptedAnswer": { "@type": "Answer", "text": "Nur wenn dein gesamtes zu versteuerndes Einkommen (steuerpflichtiger Rentenanteil abzüglich Werbungskostenpauschale und Sonderausgaben, plus ggf. andere Einkünfte) über dem Grundfreibetrag liegt. Bei alleinigem Rentenbezug ohne weitere Einkünfte bleiben viele Renten unterhalb dieser Schwelle steuerfrei — das hängt stark vom Rentenbeginnjahr und der Rentenhöhe ab. Eine genaue Aussage ersetzt diese Schätzung nicht, siehe Disclaimer." } },
+        { "@type": "Question", "name": "Wie hoch ist die Regelaltersgrenze für meinen Jahrgang?", "acceptedAnswer": { "@type": "Answer", "text": "Für Geburtsjahrgänge bis 1946 liegt sie bei 65 Jahren, steigt danach schrittweise (1 Monat pro Jahrgang bis 1958, danach 2 Monate pro Jahrgang) bis auf 67 Jahre für alle ab Jahrgang 1964. Die genaue Tabelle nach Geburtsjahr findest du auf unserer Seite Rentenrechner Tabelle." } },
+        { "@type": "Question", "name": "Was ist Rente mit 63?", "acceptedAnswer": { "@type": "Answer", "text": "Die Altersrente für besonders langjährig Versicherte (45 Beitragsjahre) erlaubt einen abschlagsfreien Rentenbeginn vor der Regelaltersgrenze. Für Jahrgänge bis 1952 war das mit 63 Jahren möglich, seitdem steigt auch diese Grenze schrittweise (2 Monate pro Jahrgang) auf 65 Jahre für Jahrgang 1964 und später." } },
+        { "@type": "Question", "name": "Wie hoch ist der Abschlag bei vorzeitigem Rentenbeginn?", "acceptedAnswer": { "@type": "Answer", "text": "0,3% der Rente pro Monat, den man vor der jeweils maßgeblichen Altersgrenze in Rente geht — lebenslang, nicht nur vorübergehend. Der Abschlag ist auf maximal 14,4% begrenzt (48 Monate = 4 Jahre vorzeitiger Bezug)." } },
+        { "@type": "Question", "name": "Was zahlt ein Rentner an Krankenversicherung (KVdR)?", "acceptedAnswer": { "@type": "Answer", "text": "Gesetzlich versicherte Rentner zahlen die Hälfte des allgemeinen Beitragssatzes (7,3% von 14,6%) plus die Hälfte des kassenindividuellen Zusatzbeitrags (im Schnitt 2026 rund 1,45% von 2,9%) — macht zusammen rund 8,75% der Bruttorente. Die Deutsche Rentenversicherung übernimmt den anderen Teil direkt." } },
+        { "@type": "Question", "name": "Wie hoch ist die Pflegeversicherung für Rentner?", "acceptedAnswer": { "@type": "Answer", "text": "3,6% der Bruttorente, komplett vom Rentner getragen (keine Aufteilung wie bei der Krankenversicherung). Kinderlose Rentner ab 23 Jahren ohne Nachweis eines Kindes zahlen einen Zuschlag von 0,6 Prozentpunkten, also 4,2% insgesamt." } },
+        { "@type": "Question", "name": "Ist dieser Rentenrechner genauso genau wie der offizielle Rechner der Deutschen Rentenversicherung?", "acceptedAnswer": { "@type": "Answer", "text": "Dieser Rechner nutzt dieselben offiziellen Sätze und Tabellen (DRV, BMF), liefert aber eine vereinfachte Schätzung ohne Zugriff auf dein individuelles Versicherungskonto. Für eine verbindliche Rentenauskunft nutze den Rentenrechner der Deutschen Rentenversicherung direkt oder lass dich in einer Beratungsstelle beraten." } },
+        { "@type": "Question", "name": "Ist dieser Rechner kostenlos und ohne Anmeldung?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Vollständig kostenlos, kein Konto, keine E-Mail-Adresse nötig. Das Ergebnis erscheint sofort im Browser — keine eingegebenen Daten werden an einen Server gesendet oder gespeichert." } },
+        { "@type": "Question", "name": "Wie wird Betriebsrente bei der Nettoberechnung behandelt?", "acceptedAnswer": { "@type": "Answer", "text": "Betriebsrenten unterliegen einer eigenen, komplexeren KVdR-Regelung (Freibetrag/Freigrenze) und werden in diesem allgemeinen Rechner nicht berücksichtigt — siehe die eigene Seite zu Rentenrechner mit Betriebsrente für diesen Sonderfall." } },
+        { "@type": "Question", "name": "Was ist der Unterschied zwischen Rentenfreibetrag und Grundfreibetrag?", "acceptedAnswer": { "@type": "Answer", "text": "Der Rentenfreibetrag ist der Teil der Bruttorente, der aufgrund des Besteuerungsanteils dauerhaft steuerfrei bleibt (z.B. 16% bei Rentenbeginn 2026). Der Grundfreibetrag ist ein allgemeiner Einkommensteuer-Freibetrag, der für alle Steuerpflichtigen gilt, unabhängig von der Einkunftsart — er wird zusätzlich auf das zu versteuernde Gesamteinkommen angewendet." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.de/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Wie benutzt man den Rentenrechner",
+      "description": "Bruttorente in Nettorente umrechnen in 3 Schritten",
+      "totalTime": "PT2M",
+      "tool": [{ "@type": "HowToTool", "name": "Rentenrechner" }],
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Bruttorente eingeben", "text": "Trage deine monatliche Bruttorente und das Jahr deines Rentenbeginns ein." },
+        { "@type": "HowToStep", "position": 2, "name": "Krankenversicherungsstatus wählen", "text": "Gib an, ob du gesetzlich krankenversichert (KVdR) bist und ob du kinderlos bist (relevant für die Pflegeversicherung)." },
+        { "@type": "HowToStep", "position": 3, "name": "Ergebnis ansehen", "text": "Der Rechner zeigt Abzüge für Kranken- und Pflegeversicherung sowie eine Steuerschätzung basierend auf dem Besteuerungsanteil deines Rentenbeginnjahres." }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --brand: #1a1a1a;
+    --brand-dark: #000000;
+    --brand-light: #fef3d5;
+    --gold: #ffce00;
+    --red: #dd0000;
+    --success: #16a34a;
+    --success-light: #dcfce7;
+    --warn: #b45309;
+    --warn-light: #fef3c7;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f8fafc;
+    --radius: 12px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+
+  header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--red) 100%); color: white; padding: 52px 20px 84px; text-align: center; }
+  header .flag { font-size: 2rem; margin-bottom: 12px; display: block; }
+  header h1 { font-size: clamp(1.4rem, 4vw, 2.1rem); font-weight: 800; margin-bottom: 12px; }
+  header p { color: rgba(255,255,255,.92); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  .tool-wrapper { margin: -52px auto 40px; position: relative; z-index: 10; }
+
+  .tab-nav { display: flex; gap: 0; background: white; border-radius: var(--radius) var(--radius) 0 0; border: 1px solid var(--border); border-bottom: none; overflow-x: auto; }
+  .tab-btn { flex: 1; padding: 14px 10px; background: none; border: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; transition: all .15s; white-space: nowrap; }
+  .tab-btn.active { color: var(--brand-dark); border-bottom-color: var(--gold); background: #fffbeb; }
+  .tab-btn:hover:not(.active) { background: #f9fafb; }
+
+  .tool-card { background: white; border-radius: 0 0 var(--radius) var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid var(--border); padding: 32px 28px; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } .tool-card { padding: 20px 16px; } .tab-btn { flex: 0 0 auto; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 0.9rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+  label span { font-weight: 400; text-transform: none; font-size: 0.85rem; }
+  input[type=number], select {
+    border: 2px solid var(--border); border-radius: 8px; padding: 12px 14px;
+    font-size: 1rem; color: var(--text); background: white; width: 100%;
+    transition: border-color .2s;
+  }
+  input[type=number]:focus, select:focus { outline: none; border-color: var(--brand-dark); }
+
+  .radio-group { display: flex; gap: 10px; flex-wrap: wrap; }
+  .radio-opt { flex: 1; min-width: 130px; }
+  .radio-opt input { display: none; }
+  .radio-opt label {
+    display: flex; align-items: center; gap: 8px; padding: 11px 14px;
+    border: 2px solid var(--border); border-radius: 8px; cursor: pointer;
+    font-size: 0.95rem; font-weight: 600; color: var(--text); text-transform: none; letter-spacing: 0;
+    transition: all .15s;
+  }
+  .radio-opt input:checked + label { border-color: var(--gold); background: #fffbeb; color: var(--brand-dark); }
+
+  .calc-btn {
+    width: 100%; margin-top: 22px; padding: 16px;
+    background: var(--brand-dark); color: white; border: none; border-radius: 10px;
+    font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background .2s;
+  }
+  .calc-btn:hover { background: #333; }
+
+  .result-box { margin-top: 24px; padding: 22px; border-radius: var(--radius); background: var(--success-light); border: 2px solid var(--success); display: none; }
+  .result-box.show { display: block; }
+  .result-box.warn { background: var(--warn-light); border-color: var(--warn); }
+  .result-headline { font-size: 1.6rem; font-weight: 800; color: var(--success); margin-bottom: 6px; }
+  .result-box.warn .result-headline { color: var(--warn); }
+  .result-sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
+  .breakdown { display: grid; gap: 8px; font-size: 0.92rem; }
+  .breakdown-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .breakdown-row.total { font-weight: 800; border-bottom: none; padding-top: 10px; }
+
+  .disclaimer-inline { font-size: 0.82rem; color: var(--muted); margin-top: 14px; padding: 10px 12px; background: #f3f4f6; border-radius: 8px; }
+
+  section.content { padding: 20px 0 40px; }
+  section.content h2 { font-size: 1.35rem; color: var(--brand-dark); margin: 36px 0 14px; }
+  section.content h2:first-child { margin-top: 0; }
+  section.content p { margin-bottom: 12px; color: var(--text); }
+  section.content ul { padding-left: 20px; margin-bottom: 14px; }
+  section.content li { margin-bottom: 6px; }
+
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+  .cluster-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+  .cluster-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 1rem; margin-bottom: 4px; }
+  .cluster-card span { font-size: 0.85rem; color: var(--muted); }
+
+  .cta-box { background: var(--brand-light); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; }
+  .cta-box strong { display: block; margin-bottom: 6px; color: var(--brand-dark); }
+  .cta-box a { color: var(--brand-dark); font-weight: 700; }
+
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+
+  footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+  footer nav { margin-bottom: 10px; }
+  footer nav a { margin: 0 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="flag">🇩🇪</span>
+  <h1>Rentenrechner 2026 — Rente Netto berechnen</h1>
+  <p>Bruttorente in Nettorente umrechnen, Regelaltersgrenze prüfen, Rente mit 63 berechnen. Kostenlos, keine Anmeldung, Ergebnis direkt im Browser.</p>
+</header>
+
+<div class="container">
+<div class="tool-wrapper">
+
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="netto">Rente Netto</button>
+    <button class="tab-btn" data-tab="alter">Regelaltersgrenze</button>
+    <button class="tab-btn" data-tab="mit63">Rente mit 63</button>
+  </div>
+
+  <div class="tool-card">
+
+    <!-- TAB 1: Brutto -> Netto -->
+    <div class="tab-panel active" id="tab-netto">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Bruttorente <span>(monatlich, €)</span></label>
+          <input type="number" id="n-brutto" placeholder="z.B. 1500" min="0" step="1">
+        </div>
+        <div class="form-group">
+          <label>Rentenbeginn <span>(Jahr)</span></label>
+          <input type="number" id="n-jahr" placeholder="z.B. 2026" min="2005" max="2060" step="1">
+        </div>
+        <div class="form-group full">
+          <label>Gesetzlich krankenversichert (KVdR)?</label>
+          <div class="radio-group">
+            <div class="radio-opt">
+              <input type="radio" name="n-kv" id="n-kv-ja" value="ja" checked>
+              <label for="n-kv-ja">Ja</label>
+            </div>
+            <div class="radio-opt">
+              <input type="radio" name="n-kv" id="n-kv-nein" value="nein">
+              <label for="n-kv-nein">Nein / privat</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Kinderlos? <span>(Zuschlag Pflegeversicherung)</span></label>
+          <div class="radio-group">
+            <div class="radio-opt">
+              <input type="radio" name="n-kinder" id="n-kinder-nein" value="nein" checked>
+              <label for="n-kinder-nein">Nein, Kind(er)</label>
+            </div>
+            <div class="radio-opt">
+              <input type="radio" name="n-kinder" id="n-kinder-ja" value="ja">
+              <label for="n-kinder-ja">Ja, kinderlos</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcNetto()">Nettorente berechnen</button>
+      <div class="result-box" id="n-result">
+        <div class="result-headline" id="n-headline"></div>
+        <div class="result-sub" id="n-sub"></div>
+        <div class="breakdown" id="n-breakdown"></div>
+      </div>
+      <div class="disclaimer-inline">Schätzung auf Basis der offiziellen KVdR-/Pflege-Beitragssätze 2026 und des Besteuerungsanteils nach Rentenbeginnjahr. Ersetzt keine individuelle Steuerberatung — siehe <a href="/steuern/">Detailseite Steuer</a> und Disclaimer unten.</div>
+    </div>
+
+    <!-- TAB 2: Regelaltersgrenze -->
+    <div class="tab-panel" id="tab-alter">
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>Geburtsjahr</label>
+          <input type="number" id="a-jahr" placeholder="z.B. 1965" min="1940" max="2010" step="1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcAlter()">Regelaltersgrenze anzeigen</button>
+      <div class="result-box" id="a-result">
+        <div class="result-headline" id="a-headline"></div>
+        <div class="result-sub" id="a-sub"></div>
+      </div>
+      <div class="disclaimer-inline">Vollständige Tabelle aller Geburtsjahrgänge auf <a href="/tabelle/">Rentenrechner Tabelle</a>.</div>
+    </div>
+
+    <!-- TAB 3: Rente mit 63 -->
+    <div class="tab-panel" id="tab-mit63">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Geburtsjahr</label>
+          <input type="number" id="r-jahr" placeholder="z.B. 1963" min="1940" max="2010" step="1">
+        </div>
+        <div class="form-group">
+          <label>Beitragsjahre <span>(Pflichtbeitrag/gleichgestellt)</span></label>
+          <input type="number" id="r-beitrag" placeholder="z.B. 45" min="0" max="55" step="1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcMit63()">Prüfen</button>
+      <div class="result-box" id="r-result">
+        <div class="result-headline" id="r-headline"></div>
+        <div class="result-sub" id="r-sub"></div>
+      </div>
+      <div class="disclaimer-inline">Ausführlicher Rechner mit Abschlagberechnung bei vorzeitigem Bezug auf <a href="/rente-mit-63/">Rente mit 63 — Detailseite</a>.</div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container">
+<section class="content">
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/brutto-netto/"><strong>Brutto-Netto Rechner</strong><span>Detaillierte Umrechnung Schritt für Schritt</span></a>
+    <a class="cluster-card" href="/steuern/"><strong>Rentenbesteuerung</strong><span>Besteuerungsanteil nach Rentenbeginnjahr</span></a>
+    <a class="cluster-card" href="/netto/"><strong>Rente Netto</strong><span>Wie viel Netto bleibt von X € Brutto?</span></a>
+    <a class="cluster-card" href="/tabelle/"><strong>Rentenrechner Tabelle</strong><span>Regelaltersgrenze nach Geburtsjahr, komplette Tabelle</span></a>
+    <a class="cluster-card" href="/drv-vergleich/"><strong>Vergleich mit DRV-Rechner</strong><span>Unterschied zum offiziellen Rechner der Deutschen Rentenversicherung</span></a>
+    <a class="cluster-card" href="/rente-mit-63/"><strong>Rente mit 63</strong><span>Abschlagsfrei oder mit Abschlag — Beispielrechnung</span></a>
+    <a class="cluster-card" href="/betriebsrente/"><strong>Rente mit Betriebsrente</strong><span>Sonderfall KVdR-Freibetrag</span></a>
+  </div>
+
+  <h2>Wie funktioniert dieser Rentenrechner?</h2>
+  <p>Der Rechner zieht von deiner Bruttorente den Eigenanteil zur Krankenversicherung der Rentner (KVdR) und den vollen Beitrag zur Pflegeversicherung ab. Anschließend wird eine Steuerschätzung auf Basis des Besteuerungsanteils deines Rentenbeginnjahres vorgenommen (siehe <a href="/steuern/">Rentenbesteuerung</a>). Alle Sätze stammen aus offiziellen Quellen (Deutsche Rentenversicherung, Bundesfinanzministerium) — Details und Quellenangaben in unserer <a href="/about/">Methodik</a>.</p>
+
+  <div class="cta-box">
+    <strong>Individuelle Beratung gewünscht?</strong>
+    <span id="cta-text">Für eine verbindliche Rentenauskunft oder persönliche Beratung wende dich an eine <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Beratung/Beratung_und_Auskunft/Beratungsstellensuche/beratungsstellensuche_node.html" rel="noopener" target="_blank">offizielle Beratungsstelle der Deutschen Rentenversicherung</a> in deiner Nähe.</span>
+    <!-- TODO Phase 2 (monetization): swap to KLUGO (Awin, self-service signup first) or anwalt.de (after traffic proven), only once Rentenberatung/Altersvorsorge Rechtsgebiet coverage confirmed (see plan). Must add: visible "Werbung"/"Anzeige" label next to the link (UWG), and enable the cookie consent banner (see /js or inline script marked COOKIE-BANNER-PHASE2) before activating any tracked affiliate link (30-day cookie). -->
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+  <div class="disclaimer-inline" style="margin-top:30px;">
+    <strong>Hinweis:</strong> Dieser Rechner liefert eine unverbindliche Schätzung und ersetzt keine individuelle Steuerberatung (§ 2 StBerG) oder Rentenauskunft der Deutschen Rentenversicherung. Für eine verbindliche Berechnung deiner persönlichen Situation wende dich an einen Steuerberater oder die Deutsche Rentenversicherung.
+  </div>
+
+</section>
+</div>
+
+<footer>
+  <nav>
+    <a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a>
+  </nav>
+  <p>© 2026 Gesmine-Invest Limited. Unverbindliche Schätzung — keine Steuer- oder Rechtsberatung.</p>
+</footer>
+
+<script>
+  // ============================================================
+  // ZENTRALE KONSTANTEN — einziger Bearbeitungspunkt, siehe research/sourcing-tracker.csv
+  // ============================================================
+  const KVDR_EIGENANTEIL = 0.073;          // 7,3% halber allgemeiner Beitragssatz KV (14,6%/2)
+  const KVDR_ZUSATZBEITRAG_2026 = 0.029;   // Durchschnitt Zusatzbeitrag 2026, RENTNER ZAHLT DIE HAELFTE DAVON — bei Aenderung hier UND in /brutto-netto/, /steuern/, /netto/ aktualisieren (siehe sourcing-tracker.csv)
+  const PFLEGE_SATZ = 0.036;               // 3,6% Basissatz
+  const PFLEGE_ZUSCHLAG_KINDERLOS = 0.006; // +0,6% Kinderlosenzuschlag = 4,2% gesamt
+
+  // Besteuerungsanteil: Formel aus Tabelle abgeleitet (steuerschroeder.de, 2026-08-01) — SS22 EStG + Wachstumschancengesetz 27.03.2024
+  function besteuerungsanteil(rentenbeginnJahr) {
+    if (rentenbeginnJahr <= 2005) return 0.50;
+    if (rentenbeginnJahr <= 2020) return 0.50 + 0.02 * (rentenbeginnJahr - 2005); // +2pp/Jahr 2006-2020
+    if (rentenbeginnJahr <= 2022) return 0.80 + 0.01 * (rentenbeginnJahr - 2020); // +1pp/Jahr 2021-2022
+    const val = 0.82 + 0.005 * (rentenbeginnJahr - 2022); // +0,5pp/Jahr ab 2023
+    return Math.min(val, 1.0); // 100% ab 2058
+  }
+
+  // Regelaltersgrenze: Tabelle 1947-1964+ (smart-rechner.de, 2026-08-01) — SS35/235 SGB VI
+  function regelaltersgrenze(geburtsjahr) {
+    if (geburtsjahr <= 1946) return { jahre: 65, monate: 0 };
+    if (geburtsjahr <= 1958) { const m = geburtsjahr - 1947 + 1; return normAge(65, m); } // +1 Monat/Jahrgang 1947-1958 (1958=66J0M)
+    if (geburtsjahr <= 1963) { const m = 12 + (geburtsjahr - 1958) * 2; return normAge(65, m); } // +2 Monate/Jahrgang ab 1959
+    return { jahre: 67, monate: 0 };
+  }
+  function normAge(baseJahre, monate) {
+    return { jahre: baseJahre + Math.floor(monate / 12), monate: monate % 12 };
+  }
+
+  // Rente mit 63 / besonders langjaehrig Versicherte (45 Beitragsjahre): Tabelle 1952-1964+ (versicherungsriese.de + cross-source, 2026-08-01) — SS38 SGB VI
+  function rente63Alter(geburtsjahr) {
+    if (geburtsjahr <= 1952) return { jahre: 63, monate: 0 };
+    if (geburtsjahr <= 1957) { const m = (geburtsjahr - 1952) * 2; return normAge(63, m); } // +2 Monate/Jahrgang 1953-1957
+    if (geburtsjahr <= 1963) { const m = 12 + (geburtsjahr - 1958) * 2; return normAge(63, m); } // 1958=64J0M, +2 Monate/Jahrgang weiter
+    return { jahre: 65, monate: 0 };
+  }
+
+  const ABSCHLAG_PRO_MONAT = 0.003; // 0,3%/Monat, max 14,4% (48 Monate) — SS77 SGB VI
+
+  function ageToMonths(a) { return a.jahre * 12 + a.monate; }
+  function fmtAge(a) { return a.monate === 0 ? `${a.jahre} Jahre` : `${a.jahre} Jahre, ${a.monate} Monate`; }
+  function eur(n) { return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+
+  function calcNetto() {
+    const brutto = parseFloat(document.getElementById('n-brutto').value);
+    const jahr = parseInt(document.getElementById('n-jahr').value);
+    const kv = document.querySelector('input[name=n-kv]:checked').value;
+    const kinderlos = document.querySelector('input[name=n-kinder]:checked').value === 'ja';
+    if (!brutto || brutto <= 0 || !jahr) { alert('Bitte Bruttorente und Rentenbeginn-Jahr eingeben.'); return; }
+
+    let kvAbzug = 0;
+    if (kv === 'ja') {
+      kvAbzug = brutto * (KVDR_EIGENANTEIL + KVDR_ZUSATZBEITRAG_2026 / 2);
+    }
+    const pflegeSatz = PFLEGE_SATZ + (kinderlos ? PFLEGE_ZUSCHLAG_KINDERLOS : 0);
+    const pflegeAbzug = brutto * pflegeSatz;
+
+    const bAnteil = besteuerungsanteil(jahr);
+    const steuerpflichtigerAnteilMonat = brutto * bAnteil;
+    // Grobe Schätzung: Grundfreibetrag 2026 ca. 12.348€/Jahr (1.029€/Monat) auf das GESAMTE zvE angewendet — hier vereinfacht nur auf den Rentenanteil, siehe Disclaimer
+    const GRUNDFREIBETRAG_MONAT_2026 = 1029;
+    const zvE = Math.max(0, steuerpflichtigerAnteilMonat - GRUNDFREIBETRAG_MONAT_2026);
+    const steuerSchaetzsatz = 0.14; // vereinfachter Eingangssteuersatz-Näherungswert, NUR für grobe Orientierung — echte Formel ist eine Zonenformel, siehe Disclaimer
+    const steuerSchaetzung = zvE * steuerSchaetzsatz;
+
+    const netto = brutto - kvAbzug - pflegeAbzug - steuerSchaetzung;
+
+    document.getElementById('n-headline').textContent = eur(netto) + ' / Monat';
+    document.getElementById('n-sub').textContent = `Geschätzte Nettorente bei Rentenbeginn ${jahr} (Besteuerungsanteil ${(bAnteil*100).toFixed(1)}%)`;
+    document.getElementById('n-breakdown').innerHTML = `
+      <div class="breakdown-row"><span>Bruttorente</span><span>${eur(brutto)}</span></div>
+      <div class="breakdown-row"><span>− Krankenversicherung (KVdR)</span><span>${eur(kvAbzug)}</span></div>
+      <div class="breakdown-row"><span>− Pflegeversicherung (${(pflegeSatz*100).toFixed(1)}%)</span><span>${eur(pflegeAbzug)}</span></div>
+      <div class="breakdown-row"><span>− Steuerschätzung (grob)</span><span>${eur(steuerSchaetzung)}</span></div>
+      <div class="breakdown-row total"><span>Nettorente</span><span>${eur(netto)}</span></div>
+    `;
+    document.getElementById('n-result').classList.add('show');
+  }
+
+  function calcAlter() {
+    const jahr = parseInt(document.getElementById('a-jahr').value);
+    if (!jahr) { alert('Bitte Geburtsjahr eingeben.'); return; }
+    const age = regelaltersgrenze(jahr);
+    document.getElementById('a-headline').textContent = fmtAge(age);
+    document.getElementById('a-sub').textContent = `Regelaltersgrenze für Geburtsjahrgang ${jahr}`;
+    document.getElementById('a-result').classList.add('show');
+  }
+
+  function calcMit63() {
+    const jahr = parseInt(document.getElementById('r-jahr').value);
+    const beitrag = parseFloat(document.getElementById('r-beitrag').value);
+    if (!jahr) { alert('Bitte Geburtsjahr eingeben.'); return; }
+    const box = document.getElementById('r-result');
+    box.classList.remove('warn');
+    if (!beitrag || beitrag < 45) {
+      document.getElementById('r-headline').textContent = 'Nicht abschlagsfrei möglich';
+      document.getElementById('r-sub').textContent = 'Die Altersrente für besonders langjährig Versicherte setzt mindestens 45 Beitragsjahre voraus. Mit weniger Beitragsjahren gilt die Regelaltersgrenze bzw. die allgemeine Altersrente für langjährig Versicherte (35 Jahre, mit Abschlag).';
+      box.classList.add('warn');
+    } else {
+      const age = rente63Alter(jahr);
+      document.getElementById('r-headline').textContent = fmtAge(age) + ' abschlagsfrei';
+      document.getElementById('r-sub').textContent = `Frühester abschlagsfreier Rentenbeginn für Geburtsjahrgang ${jahr} mit 45+ Beitragsjahren.`;
+    }
+    box.classList.add('show');
+  }
+
+  // FAQ rendering — MUST stay in sync with JSON-LD FAQPage above (run: node research/check-faq-sync.js before deploy)
+  const FAQ_ITEMS = [
+    ["Wie berechnet man die Nettorente aus der Bruttorente?", "Von der Bruttorente werden der Eigenanteil zur Krankenversicherung der Rentner (KVdR, 7,3% + halber Zusatzbeitrag der Kasse), der volle Beitrag zur Pflegeversicherung (3,6%, Kinderlose 4,2%) sowie ggf. Einkommensteuer auf den steuerpflichtigen Anteil der Rente abgezogen. Der steuerpflichtige Anteil hängt vom Jahr des Rentenbeginns ab (Besteuerungsanteil)."],
+    ["Was ist der Besteuerungsanteil der Rente?", "Der Besteuerungsanteil legt fest, wie viel Prozent der Bruttorente steuerpflichtig sind. Er hängt vom Jahr des Rentenbeginns ab: 50% bei Rentenbeginn bis 2005, steigend um 2 Prozentpunkte pro Jahr bis 2020 (80%), dann 1 Punkt/Jahr bis 2022 (82%), seit dem Wachstumschancengesetz 2024 nur noch 0,5 Punkte/Jahr — 84% bei Rentenbeginn 2026, 100% erst ab Rentenbeginn 2058."],
+    ["Muss ich als Rentner überhaupt Steuern zahlen?", "Nur wenn dein gesamtes zu versteuerndes Einkommen (steuerpflichtiger Rentenanteil abzüglich Werbungskostenpauschale und Sonderausgaben, plus ggf. andere Einkünfte) über dem Grundfreibetrag liegt. Bei alleinigem Rentenbezug ohne weitere Einkünfte bleiben viele Renten unterhalb dieser Schwelle steuerfrei — das hängt stark vom Rentenbeginnjahr und der Rentenhöhe ab. Eine genaue Aussage ersetzt diese Schätzung nicht, siehe Disclaimer."],
+    ["Wie hoch ist die Regelaltersgrenze für meinen Jahrgang?", "Für Geburtsjahrgänge bis 1946 liegt sie bei 65 Jahren, steigt danach schrittweise (1 Monat pro Jahrgang bis 1958, danach 2 Monate pro Jahrgang) bis auf 67 Jahre für alle ab Jahrgang 1964. Die genaue Tabelle nach Geburtsjahr findest du auf unserer Seite Rentenrechner Tabelle."],
+    ["Was ist Rente mit 63?", "Die Altersrente für besonders langjährig Versicherte (45 Beitragsjahre) erlaubt einen abschlagsfreien Rentenbeginn vor der Regelaltersgrenze. Für Jahrgänge bis 1952 war das mit 63 Jahren möglich, seitdem steigt auch diese Grenze schrittweise (2 Monate pro Jahrgang) auf 65 Jahre für Jahrgang 1964 und später."],
+    ["Wie hoch ist der Abschlag bei vorzeitigem Rentenbeginn?", "0,3% der Rente pro Monat, den man vor der jeweils maßgeblichen Altersgrenze in Rente geht — lebenslang, nicht nur vorübergehend. Der Abschlag ist auf maximal 14,4% begrenzt (48 Monate = 4 Jahre vorzeitiger Bezug)."],
+    ["Was zahlt ein Rentner an Krankenversicherung (KVdR)?", "Gesetzlich versicherte Rentner zahlen die Hälfte des allgemeinen Beitragssatzes (7,3% von 14,6%) plus die Hälfte des kassenindividuellen Zusatzbeitrags (im Schnitt 2026 rund 1,45% von 2,9%) — macht zusammen rund 8,75% der Bruttorente. Die Deutsche Rentenversicherung übernimmt den anderen Teil direkt."],
+    ["Wie hoch ist die Pflegeversicherung für Rentner?", "3,6% der Bruttorente, komplett vom Rentner getragen (keine Aufteilung wie bei der Krankenversicherung). Kinderlose Rentner ab 23 Jahren ohne Nachweis eines Kindes zahlen einen Zuschlag von 0,6 Prozentpunkten, also 4,2% insgesamt."],
+    ["Ist dieser Rentenrechner genauso genau wie der offizielle Rechner der Deutschen Rentenversicherung?", "Dieser Rechner nutzt dieselben offiziellen Sätze und Tabellen (DRV, BMF), liefert aber eine vereinfachte Schätzung ohne Zugriff auf dein individuelles Versicherungskonto. Für eine verbindliche Rentenauskunft nutze den Rentenrechner der Deutschen Rentenversicherung direkt oder lass dich in einer Beratungsstelle beraten."],
+    ["Ist dieser Rechner kostenlos und ohne Anmeldung?", "Ja. Vollständig kostenlos, kein Konto, keine E-Mail-Adresse nötig. Das Ergebnis erscheint sofort im Browser — keine eingegebenen Daten werden an einen Server gesendet oder gespeichert."],
+    ["Wie wird Betriebsrente bei der Nettoberechnung behandelt?", "Betriebsrenten unterliegen einer eigenen, komplexeren KVdR-Regelung (Freibetrag/Freigrenze) und werden in diesem allgemeinen Rechner nicht berücksichtigt — siehe die eigene Seite zu Rentenrechner mit Betriebsrente für diesen Sonderfall."],
+    ["Was ist der Unterschied zwischen Rentenfreibetrag und Grundfreibetrag?", "Der Rentenfreibetrag ist der Teil der Bruttorente, der aufgrund des Besteuerungsanteils dauerhaft steuerfrei bleibt (z.B. 16% bei Rentenbeginn 2026). Der Grundfreibetrag ist ein allgemeiner Einkommensteuer-Freibetrag, der für alle Steuerpflichtigen gilt, unabhängig von der Einkunftsart — er wird zusätzlich auf das zu versteuernde Gesamteinkommen angewendet."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // COOKIE-BANNER-PHASE2: dormant scaffold, activate together with Phase 2 affiliate CTA swap (KLUGO/anwalt.de, 30-day tracking cookie triggers DSGVO/TTDSG consent requirement)
+  // function showCookieBanner() { /* TODO: implement banner + consent gate before enabling affiliate link tracking */ }
+</script>
+</body>
+</html>
