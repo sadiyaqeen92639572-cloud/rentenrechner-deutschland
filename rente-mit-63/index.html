@@ -95,7 +95,7 @@
 <header>
   <a class="back" href="/">← Zurück zum Rentenrechner</a>
   <h1>🇩🇪 Rente mit 63 berechnen</h1>
-  <p>Abschlagsfrei berechtigt? Und wie hoch ist der Abschlag bei vorzeitigem Bezug?</p>
+  <p>Bin ich mit 45 Beitragsjahren abschlagsfrei berechtigt? Und wie hoch ist der Abschlag bei vorzeitigem Bezug?</p>
 </header>
 
 <div class="container">
@@ -107,7 +107,7 @@
         <input type="number" id="r63-geburt" placeholder="z.B. 1963" min="1940" max="2010" step="1">
       </div>
       <div class="form-group">
-        <label>Beitragsjahre <span>(Pflicht + gleichgestellt)</span></label>
+        <label>Beitragsjahre <span>(mind. 45 für Abschlagsfreiheit)</span></label>
         <input type="number" id="r63-beitrag" placeholder="z.B. 45" min="0" max="55" step="1">
       </div>
       <div class="form-group">
@@ -151,12 +151,6 @@
 <script>
   // ZENTRALE FUNKTIONEN — Kopie von index.html, bei Änderung SYNCHRON halten (siehe research/sourcing-tracker.csv)
   function normAge(baseJahre, monate) { return { jahre: baseJahre + Math.floor(monate / 12), monate: monate % 12 }; }
-  function regelaltersgrenze(geburtsjahr) {
-    if (geburtsjahr <= 1946) return { jahre: 65, monate: 0 };
-    if (geburtsjahr <= 1958) { const m = geburtsjahr - 1947 + 1; return normAge(65, m); }
-    if (geburtsjahr <= 1963) { const m = 12 + (geburtsjahr - 1958) * 2; return normAge(65, m); }
-    return { jahre: 67, monate: 0 };
-  }
   function rente63Alter(geburtsjahr) {
     if (geburtsjahr <= 1952) return { jahre: 63, monate: 0 };
     if (geburtsjahr <= 1957) { const m = (geburtsjahr - 1952) * 2; return normAge(63, m); }
@@ -178,8 +172,17 @@
     const box = document.getElementById('r63-result');
     box.classList.remove('warn');
 
-    const grenze = (beitrag >= 45) ? rente63Alter(geburt) : regelaltersgrenze(geburt);
-    const grenzeLabel = (beitrag >= 45) ? 'abschlagsfreies Alter (45+ Beitragsjahre)' : 'Regelaltersgrenze (unter 45 Beitragsjahre)';
+    if (beitrag < 45) {
+      document.getElementById('r63-headline').textContent = 'Nicht abschlagsfrei — Frührente-Rechner nutzen';
+      document.getElementById('r63-sub').textContent = 'Diese Seite berechnet nur die Altersrente für besonders langjährig Versicherte (45+ Beitragsjahre, abschlagsfrei ab 63). Mit weniger Beitragsjahren gilt die allgemeine Altersrente für langjährig Versicherte (35 Jahre, mit Abschlag) — siehe Frührente-Rechner.';
+      document.getElementById('r63-breakdown').innerHTML = '<div class="breakdown-row total"><span></span><span><a href="/fruehrente/">→ Zum Frührente-Rechner (35 Beitragsjahre)</a></span></div>';
+      box.classList.add('warn');
+      box.classList.add('show');
+      return;
+    }
+
+    const grenze = rente63Alter(geburt);
+    const grenzeLabel = 'abschlagsfreies Alter (45+ Beitragsjahre)';
     const wunschMonate = Math.round(wunschJahre * 12);
     const grenzeMonate = ageToMonths(grenze);
     const vorzeitigMonate = Math.max(0, grenzeMonate - wunschMonate);

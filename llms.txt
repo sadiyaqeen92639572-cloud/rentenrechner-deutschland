@@ -32,6 +32,10 @@ Rentner-Eigenanteil: 7,3% (halber allgemeiner Beitragssatz von 14,6%) + die Häl
 
 Entgeltpunkte pro Jahr = beitragspflichtiges Bruttojahresgehalt (gedeckelt auf Beitragsbemessungsgrenze) ÷ vorläufiges Durchschnittsentgelt. 2026: Durchschnittsentgelt 51.944 €/Jahr, Beitragsbemessungsgrenze allg. RV 8.450 €/Monat (101.400 €/Jahr), aktueller Rentenwert 42,52 € ab 01.07.2026. Bruttorente = Entgeltpunkte gesamt × Rentenwert. Implementiert auf /rentenpunkte/.
 
+## Altersrente für langjährig Versicherte / Frührente (§ 36 SGB VI, 35 Beitragsjahre)
+
+Ab 35 Beitragsjahren (Wartezeit) frühestens ab 63 möglich, mit Abschlag von 0,3%/Monat vor der Regelaltersgrenze (max. 14,4%, § 77 SGB VI) — eigenständige Rentenart, getrennt von § 38 SGB VI (45 Jahre, abschlagsfrei, "Rente mit 63"). Implementiert auf /fruehrente/, während /rente-mit-63/ ausschließlich die 45-Jahre-Variante abdeckt.
+
 ## Nicht modelliert (bewusster Gap, kein fehlender Wert)
 
 - Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)
