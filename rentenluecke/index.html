@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentenlücke berechnen 2026 — Versorgungslücke im Alter kostenlos schätzen</title>
+<meta name="description" content="Rentenlücke berechnen: wie groß ist die Differenz zwischen deinem heutigen Nettoeinkommen und deiner erwarteten Nettorente? Kostenloser Rechner mit anpassbarer Zielquote.">
+<meta name="keywords" content="rentenlücke berechnen, rentenlücke rechner, versorgungslücke rente, rentenniveau 2026">
+<link rel="canonical" href="https://rentenrechner-deutschland.com/rentenluecke/">
+<meta property="og:title" content="Rentenlücke berechnen 2026">
+<meta property="og:description" content="Differenz zwischen heutigem Nettoeinkommen und erwarteter Nettorente schätzen. Kostenlos, anpassbare Zielquote.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.com/rentenluecke/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Rentenlücken-Rechner",
+      "url": "https://rentenrechner-deutschland.com/rentenluecke/",
+      "description": "Rechner für die Rentenlücke: Differenz zwischen heutigem Nettoeinkommen (gewichtet mit einer Zielquote) und der erwarteten gesetzlichen Nettorente.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "areaServed": { "@type": "Country", "name": "Germany" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist die Rentenlücke?", "acceptedAnswer": { "@type": "Answer", "text": "Die Differenz zwischen dem Einkommen, das du im Ruhestand voraussichtlich benötigst (meist als Prozentsatz deines heutigen Nettoeinkommens, die sogenannte Zielquote), und deiner erwarteten gesetzlichen Nettorente. Reicht die Rente allein nicht aus, entsteht eine Lücke, die durch private oder betriebliche Vorsorge geschlossen werden muss." } },
+        { "@type": "Question", "name": "Was ist eine realistische Zielquote?", "acceptedAnswer": { "@type": "Answer", "text": "Als Faustregel in der Finanzberatung gelten häufig rund 80% des letzten Nettoeinkommens, um den gewohnten Lebensstandard zu halten (geringere Fixkosten im Alter, aber auch neue Ausgaben wie Gesundheit/Freizeit). Das ist keine gesetzliche Vorgabe, sondern eine grobe Orientierung — im Rechner frei anpassbar." } },
+        { "@type": "Question", "name": "Wie hoch ist das gesetzliche Rentenniveau 2026?", "acceptedAnswer": { "@type": "Answer", "text": "48%, gesetzlich abgesichert durch eine Haltelinie bis 2031 (Rentenpaket 2025, in Kraft seit 01.01.2026). Das Rentenniveau ist ein abstrakter Durchschnittswert (Verhältnis Standardrente zu Durchschnittsentgelt) und beschreibt nicht deine individuelle Rentenlücke — dafür ist deine persönliche erwartete Nettorente entscheidend." } },
+        { "@type": "Question", "name": "Woher bekomme ich meine erwartete Nettorente für diesen Rechner?", "acceptedAnswer": { "@type": "Answer", "text": "Schätze zuerst deine Bruttorente mit dem Rentenpunkte-Rechner aus deinem Gehalt, rechne sie anschließend mit dem Brutto-Netto Rechner in eine Nettorente um. Alternativ nutze den Wert aus deiner jährlichen Renteninformation der Deutschen Rentenversicherung, falls vorhanden." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Rentenlücke-Rechner", "item": "https://rentenrechner-deutschland.com/rentenluecke/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand: #1a1a1a; --brand-dark: #000; --brand-light: #fef3d5; --gold: #ffce00; --red: #dd0000; --success: #16a34a; --success-light: #dcfce7; --warn: #b45309; --warn-light: #fef3c7; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --bg: #f8fafc; --radius: 12px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--red) 100%); color: white; padding: 44px 20px 76px; text-align: center; }
+  header a.back { color: white; display: block; margin-bottom: 10px; }
+  header h1 { font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 800; margin-bottom: 10px; }
+  header p { color: rgba(255,255,255,.9); font-size: 0.98rem; max-width: 600px; margin: 0 auto; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+  .tool-wrapper { margin: -44px auto 24px; position: relative; z-index: 10; }
+  .tool-card { background: white; border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid var(--border); padding: 30px 26px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } .tool-card { padding: 20px 16px; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 0.9rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+  label span { font-weight: 400; text-transform: none; font-size: 0.85rem; }
+  input[type=number] { border: 2px solid var(--border); border-radius: 8px; padding: 12px 14px; font-size: 1rem; width: 100%; }
+  input[type=number]:focus { outline: none; border-color: var(--brand-dark); }
+  .calc-btn { width: 100%; margin-top: 22px; padding: 16px; background: var(--brand-dark); color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .calc-btn:hover { background: #333; }
+  .result-box { margin-top: 24px; padding: 22px; border-radius: var(--radius); background: var(--success-light); border: 2px solid var(--success); display: none; }
+  .result-box.show { display: block; }
+  .result-box.warn { background: var(--warn-light); border-color: var(--warn); }
+  .result-headline { font-size: 1.5rem; font-weight: 800; color: var(--success); margin-bottom: 6px; }
+  .result-box.warn .result-headline { color: var(--warn); }
+  .result-sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
+  .breakdown { display: grid; gap: 8px; font-size: 0.92rem; }
+  .breakdown-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .breakdown-row.total { font-weight: 800; border-bottom: none; padding-top: 10px; }
+  .disclaimer-inline { font-size: 0.82rem; color: var(--muted); margin-top: 14px; padding: 10px 12px; background: #f3f4f6; border-radius: 8px; }
+  section.content { padding: 20px 0 40px; }
+  section.content h2 { font-size: 1.3rem; color: var(--brand-dark); margin: 32px 0 12px; }
+  section.content h2:first-child { margin-top: 0; }
+  section.content p { margin-bottom: 12px; }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+  .cluster-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+  .cluster-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 1rem; margin-bottom: 4px; }
+  .cluster-card span { font-size: 0.85rem; color: var(--muted); }
+  .cta-box { background: var(--brand-light); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; }
+  .cta-box strong { display: block; margin-bottom: 6px; color: var(--brand-dark); }
+  .cta-box a { color: var(--brand-dark); font-weight: 700; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+  .table-wrap { overflow-x: auto; margin-bottom: 14px; }
+  table.const-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  table.const-table th, table.const-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  table.const-table th { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: .4px; }
+  footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+  .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .stand-bar strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="/">← Zurück zum Rentenrechner</a>
+  <h1>🇩🇪 Rentenlücke berechnen</h1>
+  <p>Differenz zwischen deinem heutigen Nettoeinkommen und deiner erwarteten Nettorente schätzen.</p>
+</header>
+
+<div class="container">
+<div class="tool-wrapper">
+  <div class="tool-card">
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Heutiges Nettoeinkommen <span>(€/Monat)</span></label>
+        <input type="number" id="rl-netto-heute" placeholder="z.B. 2800" min="0" step="1">
+      </div>
+      <div class="form-group">
+        <label>Zielquote <span>(% des heutigen Nettos)</span></label>
+        <input type="number" id="rl-zielquote" placeholder="80" min="30" max="150" step="1" value="80">
+      </div>
+      <div class="form-group full">
+        <label>Erwartete Nettorente <span>(€/Monat)</span></label>
+        <input type="number" id="rl-netto-rente" placeholder="z.B. 1600" min="0" step="1">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcRL()">Rentenlücke berechnen</button>
+    <div class="result-box" id="rl-result">
+      <div class="result-headline" id="rl-headline"></div>
+      <div class="result-sub" id="rl-sub"></div>
+      <div class="breakdown" id="rl-breakdown"></div>
+    </div>
+    <div class="disclaimer-inline">Erwartete Nettorente noch nicht bekannt? Erst mit dem <a href="/rentenpunkte/">Rentenpunkte-Rechner</a> die Bruttorente schätzen, dann mit dem <a href="/brutto-netto/">Brutto-Netto Rechner</a> in Netto umrechnen.</div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<section class="content">
+
+  <div class="stand-bar"><strong>Stand: 1. August 2026.</strong> Standardrentenniveau 2026: 48% (Haltelinie bis 2031, Rentenpaket 2025). Zielquote 80% ist eine Finanzberatungs-Faustregel, keine gesetzliche Vorgabe. Quellen, Sourcing-Log und Methodik: <a href="/about/">siehe Methodik & Quellen</a>.</div>
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus Gehalt Entgeltpunkte & Bruttorente schätzen</span></a>
+    <a class="cluster-card" href="/brutto-netto/"><strong>Brutto-Netto Rechner</strong><span>Bruttorente in Nettorente umrechnen</span></a>
+    <a class="cluster-card" href="/"><strong>Rentenrechner (Startseite)</strong><span>Brutto/Netto, Regelaltersgrenze, Rente mit 63</span></a>
+  </div>
+
+  <h2>Wie die Rentenlücke berechnet wird</h2>
+  <p>Als Zielquote gilt in der Finanzberatung häufig ein Richtwert von rund 80% des letzten Nettoeinkommens, um den gewohnten Lebensstandard im Ruhestand zu halten. Von diesem Versorgungsziel wird deine erwartete gesetzliche Nettorente abgezogen — der Rest ist die Lücke, die durch private oder betriebliche Vorsorge geschlossen werden müsste.</p>
+
+  <div class="table-wrap">
+  <table class="const-table">
+    <thead><tr><th>Größe</th><th>Wert 2026</th><th>Quelle</th></tr></thead>
+    <tbody>
+      <tr><td>Standardrentenniveau (Haltelinie)</td><td>48%, gesichert bis 2031</td><td>Rentenpaket 2025, BMAS/Bundestag</td></tr>
+      <tr><td>Zielquote (Faustregel)</td><td>~80% des letzten Nettos</td><td>Branchen-Konsens (ING, DKB, Verbraucherzentrale) — kein Gesetzeswert</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="background:#1e3a5f;color:#e2e8f0;border-radius:8px;padding:18px 20px;font-family:'Courier New',monospace;font-size:0.83rem;line-height:2;margin-bottom:16px;">
+    <span style="color:#86efac;">— Formel —</span><br>
+    <span style="color:#7dd3fc;">versorgungsziel</span> = nettoeinkommen_heute × zielquote<br>
+    <span style="color:#7dd3fc;">rentenluecke</span> = versorgungsziel − nettorente_erwartet
+  </div>
+
+  <div class="cta-box">
+    <strong>Individuelle Beratung gewünscht?</strong>
+    <span id="cta-text">Für eine verbindliche Rentenauskunft oder persönliche Beratung wende dich an eine <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Beratung/Beratung_und_Auskunft/Beratungsstellensuche/beratungsstellensuche_node.html" rel="noopener" target="_blank">offizielle Beratungsstelle der Deutschen Rentenversicherung</a> in deiner Nähe.</span>
+    <!-- TODO Phase 2 (monetization): swap to KLUGO (Awin, self-service signup first) or anwalt.de (after traffic proven), only once Rentenberatung/Altersvorsorge Rechtsgebiet coverage confirmed (see plan). Must add: visible "Werbung"/"Anzeige" label next to the link (UWG), and enable the cookie consent banner before activating any tracked affiliate link (30-day cookie). -->
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+  <div class="disclaimer-inline" style="margin-top:30px;">
+    <strong>Hinweis:</strong> Dieser Rechner liefert eine grobe Orientierung auf Basis einer pauschalen Zielquote, keine individuelle Finanz- oder Anlageberatung. Inflation, Steueränderungen und individuelle Lebensumstände werden nicht berücksichtigt.
+  </div>
+
+</section>
+</div>
+
+<footer>
+  <nav><a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a></nav>
+  <p>© 2026 Gesmine-Invest Limited. Unverbindliche Schätzung — keine Finanz- oder Anlageberatung.</p>
+</footer>
+
+<script>
+  function eur(n) { return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+
+  function calcRL() {
+    const nettoHeute = parseFloat(document.getElementById('rl-netto-heute').value);
+    const zielquote = parseFloat(document.getElementById('rl-zielquote').value) || 80;
+    const nettoRente = parseFloat(document.getElementById('rl-netto-rente').value);
+    if (!nettoHeute || nettoHeute <= 0 || nettoRente === undefined || isNaN(nettoRente)) { alert('Bitte heutiges Nettoeinkommen und erwartete Nettorente eingeben.'); return; }
+
+    const versorgungsziel = nettoHeute * (zielquote / 100);
+    const luecke = versorgungsziel - nettoRente;
+
+    const box = document.getElementById('rl-result');
+    box.classList.remove('warn');
+    if (luecke <= 0) {
+      document.getElementById('rl-headline').textContent = 'Keine Lücke';
+      document.getElementById('rl-sub').textContent = `Deine erwartete Nettorente erreicht oder übersteigt dein Versorgungsziel von ${eur(versorgungsziel)} (${zielquote}% des heutigen Nettos).`;
+      document.getElementById('rl-breakdown').innerHTML = `
+        <div class="breakdown-row"><span>Versorgungsziel (${zielquote}%)</span><span>${eur(versorgungsziel)}</span></div>
+        <div class="breakdown-row total"><span>Erwartete Nettorente</span><span>${eur(nettoRente)}</span></div>
+      `;
+    } else {
+      document.getElementById('rl-headline').textContent = eur(luecke) + ' / Monat Lücke';
+      document.getElementById('rl-sub').textContent = `Bei einer Zielquote von ${zielquote}% deines heutigen Nettoeinkommens.`;
+      document.getElementById('rl-breakdown').innerHTML = `
+        <div class="breakdown-row"><span>Versorgungsziel (${zielquote}%)</span><span>${eur(versorgungsziel)}</span></div>
+        <div class="breakdown-row"><span>− Erwartete Nettorente</span><span>${eur(nettoRente)}</span></div>
+        <div class="breakdown-row total"><span>Rentenlücke</span><span>${eur(luecke)}</span></div>
+      `;
+      box.classList.add('warn');
+    }
+    box.classList.add('show');
+  }
+
+  // FAQ rendering — MUST stay in sync with JSON-LD FAQPage above (run: node research/check-faq-sync.js before deploy)
+  const FAQ_ITEMS = [
+    ["Was ist die Rentenlücke?", "Die Differenz zwischen dem Einkommen, das du im Ruhestand voraussichtlich benötigst (meist als Prozentsatz deines heutigen Nettoeinkommens, die sogenannte Zielquote), und deiner erwarteten gesetzlichen Nettorente. Reicht die Rente allein nicht aus, entsteht eine Lücke, die durch private oder betriebliche Vorsorge geschlossen werden muss."],
+    ["Was ist eine realistische Zielquote?", "Als Faustregel in der Finanzberatung gelten häufig rund 80% des letzten Nettoeinkommens, um den gewohnten Lebensstandard zu halten (geringere Fixkosten im Alter, aber auch neue Ausgaben wie Gesundheit/Freizeit). Das ist keine gesetzliche Vorgabe, sondern eine grobe Orientierung — im Rechner frei anpassbar."],
+    ["Wie hoch ist das gesetzliche Rentenniveau 2026?", "48%, gesetzlich abgesichert durch eine Haltelinie bis 2031 (Rentenpaket 2025, in Kraft seit 01.01.2026). Das Rentenniveau ist ein abstrakter Durchschnittswert (Verhältnis Standardrente zu Durchschnittsentgelt) und beschreibt nicht deine individuelle Rentenlücke — dafür ist deine persönliche erwartete Nettorente entscheidend."],
+    ["Woher bekomme ich meine erwartete Nettorente für diesen Rechner?", "Schätze zuerst deine Bruttorente mit dem Rentenpunkte-Rechner aus deinem Gehalt, rechne sie anschließend mit dem Brutto-Netto Rechner in eine Nettorente um. Alternativ nutze den Wert aus deiner jährlichen Renteninformation der Deutschen Rentenversicherung, falls vorhanden."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+</script>
+</body>
+</html>

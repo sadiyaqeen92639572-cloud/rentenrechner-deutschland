@@ -36,6 +36,10 @@ Entgeltpunkte pro Jahr = beitragspflichtiges Bruttojahresgehalt (gedeckelt auf B
 
 Ab 35 Beitragsjahren (Wartezeit) frühestens ab 63 möglich, mit Abschlag von 0,3%/Monat vor der Regelaltersgrenze (max. 14,4%, § 77 SGB VI) — eigenständige Rentenart, getrennt von § 38 SGB VI (45 Jahre, abschlagsfrei, "Rente mit 63"). Implementiert auf /fruehrente/, während /rente-mit-63/ ausschließlich die 45-Jahre-Variante abdeckt.
 
+## Rentenlücke (Standardrentenniveau 48%, Zielquote-Faustregel 80%)
+
+Rentenlücke = (Nettoeinkommen_heute × Zielquote) − Nettorente_erwartet. Standardrentenniveau 2026 = 48% (gesetzliche Haltelinie bis 2031, Rentenpaket 2025) — informativ, nicht Teil der Formel. Zielquote 80% ist Finanzberatungs-Faustregel (ING/DKB/Verbraucherzentrale-Konsens), kein Gesetzeswert, im Rechner editierbar. Implementiert auf /rentenluecke/.
+
 ## Nicht modelliert (bewusster Gap, kein fehlender Wert)
 
 - Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)

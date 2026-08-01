@@ -5,7 +5,7 @@ const path = require('path');
 
 const PAGES = ['index.html', 'brutto-netto/index.html', 'steuern/index.html', 'netto/index.html',
   'tabelle/index.html', 'drv-vergleich/index.html', 'rente-mit-63/index.html', 'betriebsrente/index.html',
-  'rentenpunkte/index.html', 'fruehrente/index.html'];
+  'rentenpunkte/index.html', 'fruehrente/index.html', 'rentenluecke/index.html'];
 
 let failed = false;
 
