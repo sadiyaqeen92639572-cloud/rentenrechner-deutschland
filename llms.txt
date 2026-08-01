@@ -44,6 +44,10 @@ Rentenlücke = (Nettoeinkommen_heute × Zielquote) − Nettorente_erwartet. Stan
 
 Große Witwenrente: 55% der Rente des Verstorbenen, 60% Bestandsschutz (§ 255 SGB VI, Ehe vor 2002 bzw. ein Partner geboren vor 2.1.1962). Kleine Witwenrente: 25%, max. 24 Monate ohne Sonderfall. Einkommensanrechnung (§ 97 SGB VI): Freibetrag 1.122,53 €/Monat (26,4 × Rentenwert, ab 01.07.2026) + 238,11 €/Kind (5,6 × Rentenwert), Einkommen darüber wird zu 40% angerechnet. Implementiert auf /witwenrente/.
 
+## Selbstständige & Beamte (Scoping)
+
+Selbstständige mit freiwilliger/pflichtiger GRV-Versicherung (§ 2, § 7 SGB VI): gleiche Formeln wie Angestellte, siehe /rentenpunkte/. Beamte: bewusst NICHT modelliert — Beamtenversorgung läuft über BeamtVG/Landesbeamtengesetze, ein von SGB VI komplett getrenntes Rechtssystem (ruhegehaltfähige Dienstzeit statt Entgeltpunkte). Kein Kalkulationsversuch, um keine falschen Zahlen zu zeigen. Erklärt auf /selbststaendige-beamte/.
+
 ## Nicht modelliert (bewusster Gap, kein fehlender Wert)
 
 - Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)

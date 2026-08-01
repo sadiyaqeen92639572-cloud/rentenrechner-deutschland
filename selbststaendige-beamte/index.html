@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentenrechner für Selbstständige & Beamte 2026 — Was gilt für dich?</title>
+<meta name="description" content="Rentenrechner für Selbstständige: freiwillige Rentenversicherung nutzen und mit Rentenpunkte-Rechner schätzen. Für Beamte: warum die gesetzliche Rentenversicherung nicht gilt und wo du stattdessen nachschaust.">
+<meta name="keywords" content="rentenrechner selbstständige, rentenrechner beamte, freiwillige rentenversicherung selbstständig, beamtenpension berechnen">
+<link rel="canonical" href="https://rentenrechner-deutschland.com/selbststaendige-beamte/">
+<meta property="og:title" content="Rentenrechner für Selbstständige & Beamte 2026">
+<meta property="og:description" content="Was für Selbstständige und Beamte bei der Altersvorsorge gilt — und welcher Rechner der richtige ist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.com/selbststaendige-beamte/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Gilt dieser Rentenrechner auch für Selbstständige?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wenn du freiwillig in der gesetzlichen Rentenversicherung versichert bist (§ 7 SGB VI) oder als Selbstständiger pflichtversichert bist (z.B. Handwerker, Künstler über die Künstlersozialkasse, Lehrer ohne Angestellte). Deine eingezahlten Beiträge erzeugen genau wie bei Angestellten Entgeltpunkte — nutze dafür den Rentenpunkte-Rechner." } },
+        { "@type": "Question", "name": "Warum funktioniert dieser Rechner nicht für Beamte?", "acceptedAnswer": { "@type": "Answer", "text": "Beamte sind in der Regel nicht in der gesetzlichen Rentenversicherung versichert, sondern erhalten eine Beamtenversorgung (Pension) nach dem Beamtenversorgungsgesetz (BeamtVG) bzw. den Landesbeamtengesetzen — ein komplett eigenständiges Rechtssystem mit eigenen Formeln (u.a. ruhegehaltfähige Dienstzeit, Ruhegehaltssatz), das nichts mit Entgeltpunkten oder dem Rentenwert der gesetzlichen Rentenversicherung zu tun hat. Dieser Rechner bildet dieses System bewusst nicht ab, um keine falschen Zahlen zu zeigen." } },
+        { "@type": "Question", "name": "Wo finde ich einen Rechner für die Beamtenpension?", "acceptedAnswer": { "@type": "Answer", "text": "Am zuverlässigsten bei deiner Besoldungsstelle bzw. dem für dich zuständigen Landesamt für Besoldung und Versorgung, oder direkt beim Bundesverwaltungsamt für Bundesbeamte. Diese kennen deine ruhegehaltfähige Dienstzeit und Besoldungsgruppe genau." } },
+        { "@type": "Question", "name": "Was gilt für Selbstständige ohne freiwillige Rentenversicherung?", "acceptedAnswer": { "@type": "Answer", "text": "Ohne Einzahlungen in die gesetzliche Rentenversicherung entstehen auch keine Entgeltpunkte und damit keine gesetzliche Rente aus diesen Zeiten. Die Altersvorsorge läuft dann typischerweise über private Vorsorge (Rürup-Rente, ETF-Sparpläne, Immobilien) — dafür ist unser Rentenlücke-Rechner ein guter Ausgangspunkt, um den Bedarf zu schätzen." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Selbstständige & Beamte", "item": "https://rentenrechner-deutschland.com/selbststaendige-beamte/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand-dark: #000; --gold: #ffce00; --brand-light: #fef3d5; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --bg: #f8fafc; --radius: 12px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+  header { background: var(--brand-dark); color: white; padding: 44px 20px; text-align: center; }
+  header a { color: white; }
+  header h1 { font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 800; margin-top: 10px; }
+  .container { max-width: 780px; margin: 0 auto; padding: 40px 20px 60px; }
+  h2 { color: var(--brand-dark); font-size: 1.2rem; margin: 32px 0 12px; }
+  h2:first-child { margin-top: 0; }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 14px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--brand-dark); font-weight: 600; }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+  .cluster-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+  .cluster-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 1rem; margin-bottom: 4px; }
+  .cluster-card span { font-size: 0.85rem; color: var(--muted); }
+  .warn-box { background: #fef3c7; border: 2px solid #b45309; border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; font-size: 0.92rem; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+  .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .stand-bar strong { color: var(--text); }
+  footer { text-align: center; padding: 24px 20px 40px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/">← Zurück zum Rechner</a>
+  <h1>🇩🇪 Rentenrechner für Selbstständige & Beamte</h1>
+</header>
+
+<div class="container">
+
+  <div class="stand-bar"><strong>Stand: 1. August 2026.</strong> Rechtsgrundlage: § 2, § 7 SGB VI (Pflicht-/freiwillige Versicherung Selbstständiger). Quellen, Sourcing-Log und Methodik: <a href="/about/">siehe Methodik & Quellen</a>.</div>
+
+  <h2>Selbstständige: dieser Rechner funktioniert für dich</h2>
+  <p>Bist du freiwillig in der gesetzlichen Rentenversicherung versichert (§ 7 SGB VI) oder als Selbstständiger pflichtversichert (z.B. bestimmte Handwerksberufe, Künstler über die Künstlersozialkasse, Lehrer/Pflegepersonen ohne versicherungspflichtige Angestellte, § 2 SGB VI), gelten für dich exakt dieselben Regeln wie für Angestellte: deine Beiträge erzeugen Entgeltpunkte, aus denen sich deine spätere Bruttorente ergibt.</p>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus deinen Beiträgen Entgeltpunkte & Bruttorente schätzen</span></a>
+    <a class="cluster-card" href="/rentenluecke/"><strong>Rentenlücke-Rechner</strong><span>Bedarf bei fehlender oder geringer Pflichtversicherung schätzen</span></a>
+  </div>
+  <p>Zahlst du gar nicht in die gesetzliche Rentenversicherung ein, entstehen aus diesen Zeiten auch keine Entgeltpunkte — die Altersvorsorge läuft dann meist über private Wege (Rürup-Rente, ETF-Sparpläne, Immobilien). Der Rentenlücke-Rechner hilft, den ungefähren Bedarf einzuschätzen.</p>
+
+  <h2>Beamte: warum dieser Rechner NICHT für dich funktioniert</h2>
+  <div class="warn-box">
+    <strong>Wichtig:</strong> Beamte sind in der Regel nicht in der gesetzlichen Rentenversicherung versichert. Deine Altersversorgung (Pension) richtet sich nach dem Beamtenversorgungsgesetz (BeamtVG) bzw. den jeweiligen Landesbeamtengesetzen — ein eigenständiges System mit eigenen Formeln (ruhegehaltfähige Dienstzeit, Ruhegehaltssatz, Besoldungsgruppe statt Entgeltpunkte/Rentenwert). Wir bilden dieses System bewusst NICHT ab, um dir keine falsche Zahl zu zeigen.
+  </div>
+  <p>Für eine verlässliche Berechnung deiner Pension wende dich an deine Besoldungsstelle bzw. das für dich zuständige Landesamt für Besoldung und Versorgung, oder — für Bundesbeamte — an das Bundesverwaltungsamt.</p>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+</div>
+
+<footer>
+  <p><a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a> · © 2026 Gesmine-Invest Limited.</p>
+  <p><a href="/">← Zurück zum Rechner</a></p>
+</footer>
+
+<script>
+  // FAQ rendering — MUST stay in sync with JSON-LD FAQPage above (run: node research/check-faq-sync.js before deploy)
+  const FAQ_ITEMS = [
+    ["Gilt dieser Rentenrechner auch für Selbstständige?", "Ja, wenn du freiwillig in der gesetzlichen Rentenversicherung versichert bist (§ 7 SGB VI) oder als Selbstständiger pflichtversichert bist (z.B. Handwerker, Künstler über die Künstlersozialkasse, Lehrer ohne Angestellte). Deine eingezahlten Beiträge erzeugen genau wie bei Angestellten Entgeltpunkte — nutze dafür den Rentenpunkte-Rechner."],
+    ["Warum funktioniert dieser Rechner nicht für Beamte?", "Beamte sind in der Regel nicht in der gesetzlichen Rentenversicherung versichert, sondern erhalten eine Beamtenversorgung (Pension) nach dem Beamtenversorgungsgesetz (BeamtVG) bzw. den Landesbeamtengesetzen — ein komplett eigenständiges Rechtssystem mit eigenen Formeln (u.a. ruhegehaltfähige Dienstzeit, Ruhegehaltssatz), das nichts mit Entgeltpunkten oder dem Rentenwert der gesetzlichen Rentenversicherung zu tun hat. Dieser Rechner bildet dieses System bewusst nicht ab, um keine falschen Zahlen zu zeigen."],
+    ["Wo finde ich einen Rechner für die Beamtenpension?", "Am zuverlässigsten bei deiner Besoldungsstelle bzw. dem für dich zuständigen Landesamt für Besoldung und Versorgung, oder direkt beim Bundesverwaltungsamt für Bundesbeamte. Diese kennen deine ruhegehaltfähige Dienstzeit und Besoldungsgruppe genau."],
+    ["Was gilt für Selbstständige ohne freiwillige Rentenversicherung?", "Ohne Einzahlungen in die gesetzliche Rentenversicherung entstehen auch keine Entgeltpunkte und damit keine gesetzliche Rente aus diesen Zeiten. Die Altersvorsorge läuft dann typischerweise über private Vorsorge (Rürup-Rente, ETF-Sparpläne, Immobilien) — dafür ist unser Rentenlücke-Rechner ein guter Ausgangspunkt, um den Bedarf zu schätzen."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+</script>
+</body>
+</html>
