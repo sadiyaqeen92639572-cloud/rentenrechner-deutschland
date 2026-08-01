@@ -40,6 +40,10 @@ Ab 35 Beitragsjahren (Wartezeit) frühestens ab 63 möglich, mit Abschlag von 0,
 
 Rentenlücke = (Nettoeinkommen_heute × Zielquote) − Nettorente_erwartet. Standardrentenniveau 2026 = 48% (gesetzliche Haltelinie bis 2031, Rentenpaket 2025) — informativ, nicht Teil der Formel. Zielquote 80% ist Finanzberatungs-Faustregel (ING/DKB/Verbraucherzentrale-Konsens), kein Gesetzeswert, im Rechner editierbar. Implementiert auf /rentenluecke/.
 
+## Witwenrente/Witwerrente (§ 46, § 255, § 97 SGB VI)
+
+Große Witwenrente: 55% der Rente des Verstorbenen, 60% Bestandsschutz (§ 255 SGB VI, Ehe vor 2002 bzw. ein Partner geboren vor 2.1.1962). Kleine Witwenrente: 25%, max. 24 Monate ohne Sonderfall. Einkommensanrechnung (§ 97 SGB VI): Freibetrag 1.122,53 €/Monat (26,4 × Rentenwert, ab 01.07.2026) + 238,11 €/Kind (5,6 × Rentenwert), Einkommen darüber wird zu 40% angerechnet. Implementiert auf /witwenrente/.
+
 ## Nicht modelliert (bewusster Gap, kein fehlender Wert)
 
 - Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)

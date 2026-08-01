@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Witwenrente-Rechner 2026 — Große & Kleine Witwenrente berechnen</title>
+<meta name="description" content="Witwenrente-Rechner: große (55%/60%) oder kleine (25%) Witwenrente aus der Rente des Verstorbenen berechnen, inkl. Einkommensanrechnung mit Freibetrag 2026. Kostenlos.">
+<meta name="keywords" content="witwenrente rechner, witwenrente berechnen, große witwenrente, kleine witwenrente, witwenrente einkommensanrechnung">
+<link rel="canonical" href="https://rentenrechner-deutschland.com/witwenrente/">
+<meta property="og:title" content="Witwenrente-Rechner 2026">
+<meta property="og:description" content="Große (55%/60%) oder kleine (25%) Witwenrente berechnen, inkl. Einkommensanrechnung. Kostenlos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rentenrechner-deutschland.com/witwenrente/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Witwenrente-Rechner",
+      "url": "https://rentenrechner-deutschland.com/witwenrente/",
+      "description": "Rechner für die große (55%/60%) und kleine (25%) Witwenrente/Witwerrente aus der Rente des Verstorbenen, inklusive Einkommensanrechnung mit gesetzlichem Freibetrag.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "areaServed": { "@type": "Country", "name": "Germany" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist der Unterschied zwischen großer und kleiner Witwenrente?", "acceptedAnswer": { "@type": "Answer", "text": "Die große Witwenrente beträgt 55% der Rente des Verstorbenen (60% im Bestandsschutz für Ehen vor 2002 bzw. wenn ein Partner vor dem 2.1.1962 geboren ist) und wird unbefristet gezahlt, sofern die Voraussetzungen erfüllt bleiben (z.B. Alter 47+, Kindererziehung, Erwerbsminderung). Die kleine Witwenrente beträgt 25% und wird ohne diese Voraussetzungen nur für maximal 24 Monate gezahlt." } },
+        { "@type": "Question", "name": "Wer bekommt 60% statt 55% (Bestandsschutz)?", "acceptedAnswer": { "@type": "Answer", "text": "Hinterbliebene, deren Ehepartner vor dem 1.1.2002 verstorben ist, oder bei denen mindestens ein Ehepartner vor dem 2.1.1962 geboren wurde UND die Ehe vor dem 1.1.2002 geschlossen wurde (§ 255 SGB VI)." } },
+        { "@type": "Question", "name": "Wie funktioniert die Einkommensanrechnung bei der Witwenrente?", "acceptedAnswer": { "@type": "Answer", "text": "Eigenes Einkommen (z.B. eigene Rente, Erwerbseinkommen) wird oberhalb eines Freibetrags zu 40% auf die Witwenrente angerechnet und mindert sie entsprechend. Der Freibetrag beträgt 2026 das 26,4-fache des aktuellen Rentenwerts (1.122,53 € ab 01.07.2026), zuzüglich des 5,6-fachen Rentenwerts (238,11 €) für jedes anspruchsberechtigte Kind." } },
+        { "@type": "Question", "name": "Wird eigenes Vermögen auch angerechnet?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, nur Einkommen im Sinne des § 97 SGB VI (u.a. Erwerbseinkommen, eigene Renten, bestimmte Kapitalerträge) wird angerechnet, kein reines Vermögen wie Sparguthaben oder Immobilienbesitz." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rentenrechner-deutschland.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Witwenrente-Rechner", "item": "https://rentenrechner-deutschland.com/witwenrente/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --brand: #1a1a1a; --brand-dark: #000; --brand-light: #fef3d5; --gold: #ffce00; --red: #dd0000; --success: #16a34a; --success-light: #dcfce7; --warn: #b45309; --warn-light: #fef3c7; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --bg: #f8fafc; --radius: 12px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); font-size: 16px; line-height: 1.65; }
+  header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--red) 100%); color: white; padding: 44px 20px 76px; text-align: center; }
+  header a.back { color: white; display: block; margin-bottom: 10px; }
+  header h1 { font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 800; margin-bottom: 10px; }
+  header p { color: rgba(255,255,255,.9); font-size: 0.98rem; max-width: 600px; margin: 0 auto; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+  .tool-wrapper { margin: -44px auto 24px; position: relative; z-index: 10; }
+  .tool-card { background: white; border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid var(--border); padding: 30px 26px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } .tool-card { padding: 20px 16px; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 0.9rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+  label span { font-weight: 400; text-transform: none; font-size: 0.85rem; }
+  input[type=number] { border: 2px solid var(--border); border-radius: 8px; padding: 12px 14px; font-size: 1rem; width: 100%; }
+  input[type=number]:focus { outline: none; border-color: var(--brand-dark); }
+  .radio-group { display: flex; gap: 10px; flex-wrap: wrap; }
+  .radio-opt { flex: 1; min-width: 130px; }
+  .radio-opt input { display: none; }
+  .radio-opt label { display: flex; align-items: center; gap: 8px; padding: 11px 14px; border: 2px solid var(--border); border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--text); text-transform: none; letter-spacing: 0; transition: all .15s; }
+  .radio-opt input:checked + label { border-color: var(--gold); background: #fffbeb; color: var(--brand-dark); }
+  .calc-btn { width: 100%; margin-top: 22px; padding: 16px; background: var(--brand-dark); color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .calc-btn:hover { background: #333; }
+  .result-box { margin-top: 24px; padding: 22px; border-radius: var(--radius); background: var(--success-light); border: 2px solid var(--success); display: none; }
+  .result-box.show { display: block; }
+  .result-box.warn { background: var(--warn-light); border-color: var(--warn); }
+  .result-headline { font-size: 1.5rem; font-weight: 800; color: var(--success); margin-bottom: 6px; }
+  .result-box.warn .result-headline { color: var(--warn); }
+  .result-sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
+  .breakdown { display: grid; gap: 8px; font-size: 0.92rem; }
+  .breakdown-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .breakdown-row.total { font-weight: 800; border-bottom: none; padding-top: 10px; }
+  .disclaimer-inline { font-size: 0.82rem; color: var(--muted); margin-top: 14px; padding: 10px 12px; background: #f3f4f6; border-radius: 8px; }
+  section.content { padding: 20px 0 40px; }
+  section.content h2 { font-size: 1.3rem; color: var(--brand-dark); margin: 32px 0 12px; }
+  section.content h2:first-child { margin-top: 0; }
+  section.content p { margin-bottom: 12px; }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+  .cluster-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+  .cluster-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 1rem; margin-bottom: 4px; }
+  .cluster-card span { font-size: 0.85rem; color: var(--muted); }
+  .cta-box { background: var(--brand-light); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; }
+  .cta-box strong { display: block; margin-bottom: 6px; color: var(--brand-dark); }
+  .cta-box a { color: var(--brand-dark); font-weight: 700; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: var(--gold); font-weight: 900; }
+  .faq-item[open] summary::before { content: "− "; }
+  .faq-item p { margin-top: 10px; color: var(--muted); }
+  .table-wrap { overflow-x: auto; margin-bottom: 14px; }
+  table.const-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  table.const-table th, table.const-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  table.const-table th { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: .4px; }
+  footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--brand-dark); }
+  .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .stand-bar strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="/">← Zurück zum Rentenrechner</a>
+  <h1>🇩🇪 Witwenrente berechnen</h1>
+  <p>Große oder kleine Witwenrente aus der Rente des Verstorbenen — inkl. Einkommensanrechnung.</p>
+</header>
+
+<div class="container">
+<div class="tool-wrapper">
+  <div class="tool-card">
+    <div class="form-grid">
+      <div class="form-group full">
+        <label>Rente des Verstorbenen <span>(Bruttorente, €/Monat)</span></label>
+        <input type="number" id="wr-rente" placeholder="z.B. 1800" min="0" step="1">
+      </div>
+      <div class="form-group full">
+        <label>Art der Witwenrente</label>
+        <div class="radio-group">
+          <div class="radio-opt"><input type="radio" name="wr-art" id="wr-gross" value="gross" checked><label for="wr-gross">Große Witwenrente (55%)</label></div>
+          <div class="radio-opt"><input type="radio" name="wr-art" id="wr-gross60" value="gross60"><label for="wr-gross60">Große Witwenrente (60%, Bestandsschutz)</label></div>
+          <div class="radio-opt"><input type="radio" name="wr-art" id="wr-klein" value="klein"><label for="wr-klein">Kleine Witwenrente (25%)</label></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Eigenes Einkommen <span>(€/Monat, optional)</span></label>
+        <input type="number" id="wr-einkommen" placeholder="z.B. 0" min="0" step="1">
+      </div>
+      <div class="form-group">
+        <label>Anspruchsberechtigte Kinder</label>
+        <input type="number" id="wr-kinder" placeholder="0" min="0" max="10" step="1" value="0">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcWR()">Witwenrente berechnen</button>
+    <div class="result-box" id="wr-result">
+      <div class="result-headline" id="wr-headline"></div>
+      <div class="result-sub" id="wr-sub"></div>
+      <div class="breakdown" id="wr-breakdown"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<section class="content">
+
+  <div class="stand-bar"><strong>Stand: 1. August 2026.</strong> Rechtsgrundlage: § 46 SGB VI (Witwenrente/Witwerrente) · § 255 SGB VI (Bestandsschutz 60%) · § 97 SGB VI (Einkommensanrechnung). Quellen, Sourcing-Log und Methodik: <a href="/about/">siehe Methodik & Quellen</a>.</div>
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/"><strong>Rentenrechner (Startseite)</strong><span>Brutto/Netto, Regelaltersgrenze, Rente mit 63</span></a>
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus Gehalt Entgeltpunkte & Bruttorente schätzen</span></a>
+  </div>
+
+  <h2>Wie die Witwenrente berechnet wird</h2>
+  <p>Die Witwenrente ist ein Prozentsatz der Rente, die der verstorbene Ehepartner bezogen hat oder bezogen hätte. Eigenes Einkommen oberhalb eines Freibetrags wird zu 40% angerechnet und mindert die Witwenrente entsprechend.</p>
+
+  <div class="table-wrap">
+  <table class="const-table">
+    <thead><tr><th>Größe</th><th>Wert 2026</th><th>Quelle</th></tr></thead>
+    <tbody>
+      <tr><td>Große Witwenrente</td><td>55% (60% Bestandsschutz)</td><td>§ 46 Abs. 2, § 255 SGB VI</td></tr>
+      <tr><td>Kleine Witwenrente</td><td>25%, max. 24 Monate</td><td>§ 46 Abs. 1 SGB VI</td></tr>
+      <tr><td>Freibetrag Einkommensanrechnung</td><td>1.122,53 € (ab 01.07.2026)</td><td>§ 97 SGB VI, 26,4 × Rentenwert</td></tr>
+      <tr><td>Freibetrag je Kind</td><td>238,11 €/Monat</td><td>§ 97 SGB VI, 5,6 × Rentenwert</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="background:#1e3a5f;color:#e2e8f0;border-radius:8px;padding:18px 20px;font-family:'Courier New',monospace;font-size:0.83rem;line-height:2;margin-bottom:16px;">
+    <span style="color:#86efac;">— Formel —</span><br>
+    <span style="color:#7dd3fc;">witwenrente_basis</span> = rente_verstorbener × (0,55 | 0,60 | 0,25)<br>
+    <span style="color:#7dd3fc;">freibetrag</span> = 1.122,53 + kinder × 238,11<br>
+    <span style="color:#7dd3fc;">anrechnung</span> = max(0, einkommen − freibetrag) × 0,40<br>
+    <span style="color:#7dd3fc;">witwenrente_ausgezahlt</span> = max(0, witwenrente_basis − anrechnung)
+  </div>
+
+  <div class="cta-box">
+    <strong>Individuelle Beratung gewünscht?</strong>
+    <span id="cta-text">Für eine verbindliche Rentenauskunft oder persönliche Beratung wende dich an eine <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Beratung/Beratung_und_Auskunft/Beratungsstellensuche/beratungsstellensuche_node.html" rel="noopener" target="_blank">offizielle Beratungsstelle der Deutschen Rentenversicherung</a> in deiner Nähe.</span>
+    <!-- TODO Phase 2 (monetization): swap to KLUGO (Awin, self-service signup first) or anwalt.de (after traffic proven), only once Rentenberatung/Altersvorsorge Rechtsgebiet coverage confirmed (see plan). Must add: visible "Werbung"/"Anzeige" label next to the link (UWG), and enable the cookie consent banner before activating any tracked affiliate link (30-day cookie). -->
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  <div id="faq-container"></div>
+
+  <div class="disclaimer-inline" style="margin-top:30px;">
+    <strong>Hinweis:</strong> Dieser Rechner liefert eine unverbindliche Schätzung und ersetzt keine individuelle Rentenauskunft der Deutschen Rentenversicherung. Ob die 24-Monats-Frist der kleinen Witwenrente in deinem Fall verlängert wird (Kindererziehung, Erwerbsminderung, Alter), hängt von deiner individuellen Situation ab.
+  </div>
+
+</section>
+</div>
+
+<footer>
+  <nav><a href="/about/">Über uns</a> · <a href="/impressum/">Impressum</a> · <a href="/privacy/">Datenschutz</a></nav>
+  <p>© 2026 Gesmine-Invest Limited. Unverbindliche Schätzung — keine Rechtsberatung.</p>
+</footer>
+
+<script>
+  // ZENTRALE KONSTANTEN — einziger Bearbeitungspunkt, siehe research/sourcing-tracker.csv
+  const WR_FREIBETRAG_2026 = 1122.53;      // 26,4 x Rentenwert (42,52), ab 01.07.2026 — § 97 SGB VI
+  const WR_FREIBETRAG_PRO_KIND_2026 = 238.11; // 5,6 x Rentenwert
+  const WR_ANRECHNUNG_SATZ = 0.40;         // § 97 SGB VI
+
+  function eur(n) { return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+
+  function calcWR() {
+    const rente = parseFloat(document.getElementById('wr-rente').value);
+    const art = document.querySelector('input[name=wr-art]:checked').value;
+    const einkommen = parseFloat(document.getElementById('wr-einkommen').value) || 0;
+    const kinder = parseInt(document.getElementById('wr-kinder').value) || 0;
+    if (!rente || rente <= 0) { alert('Bitte die Rente des Verstorbenen eingeben.'); return; }
+
+    const satz = art === 'gross60' ? 0.60 : (art === 'klein' ? 0.25 : 0.55);
+    const satzLabel = art === 'gross60' ? '60% (Bestandsschutz)' : (art === 'klein' ? '25% (kleine Witwenrente)' : '55% (große Witwenrente)');
+    const basis = rente * satz;
+
+    const freibetrag = WR_FREIBETRAG_2026 + kinder * WR_FREIBETRAG_PRO_KIND_2026;
+    const ueberschuss = Math.max(0, einkommen - freibetrag);
+    const anrechnung = ueberschuss * WR_ANRECHNUNG_SATZ;
+    const ausgezahlt = Math.max(0, basis - anrechnung);
+
+    const box = document.getElementById('wr-result');
+    box.classList.remove('warn');
+    document.getElementById('wr-headline').textContent = eur(ausgezahlt) + ' / Monat';
+    document.getElementById('wr-sub').textContent = `${satzLabel} von ${eur(rente)}, nach Einkommensanrechnung`;
+    let breakdownHtml = `
+      <div class="breakdown-row"><span>Witwenrente vor Anrechnung (${satzLabel})</span><span>${eur(basis)}</span></div>
+      <div class="breakdown-row"><span>Freibetrag Einkommensanrechnung</span><span>${eur(freibetrag)}</span></div>`;
+    if (anrechnung > 0) {
+      breakdownHtml += `<div class="breakdown-row"><span>− Anrechnung (40% über Freibetrag)</span><span>${eur(anrechnung)}</span></div>`;
+      box.classList.add('warn');
+    }
+    breakdownHtml += `<div class="breakdown-row total"><span>Witwenrente ausgezahlt</span><span>${eur(ausgezahlt)}</span></div>`;
+    document.getElementById('wr-breakdown').innerHTML = breakdownHtml;
+    box.classList.add('show');
+  }
+
+  // FAQ rendering — MUST stay in sync with JSON-LD FAQPage above (run: node research/check-faq-sync.js before deploy)
+  const FAQ_ITEMS = [
+    ["Was ist der Unterschied zwischen großer und kleiner Witwenrente?", "Die große Witwenrente beträgt 55% der Rente des Verstorbenen (60% im Bestandsschutz für Ehen vor 2002 bzw. wenn ein Partner vor dem 2.1.1962 geboren ist) und wird unbefristet gezahlt, sofern die Voraussetzungen erfüllt bleiben (z.B. Alter 47+, Kindererziehung, Erwerbsminderung). Die kleine Witwenrente beträgt 25% und wird ohne diese Voraussetzungen nur für maximal 24 Monate gezahlt."],
+    ["Wer bekommt 60% statt 55% (Bestandsschutz)?", "Hinterbliebene, deren Ehepartner vor dem 1.1.2002 verstorben ist, oder bei denen mindestens ein Ehepartner vor dem 2.1.1962 geboren wurde UND die Ehe vor dem 1.1.2002 geschlossen wurde (§ 255 SGB VI)."],
+    ["Wie funktioniert die Einkommensanrechnung bei der Witwenrente?", "Eigenes Einkommen (z.B. eigene Rente, Erwerbseinkommen) wird oberhalb eines Freibetrags zu 40% auf die Witwenrente angerechnet und mindert sie entsprechend. Der Freibetrag beträgt 2026 das 26,4-fache des aktuellen Rentenwerts (1.122,53 € ab 01.07.2026), zuzüglich des 5,6-fachen Rentenwerts (238,11 €) für jedes anspruchsberechtigte Kind."],
+    ["Wird eigenes Vermögen auch angerechnet?", "Nein, nur Einkommen im Sinne des § 97 SGB VI (u.a. Erwerbseinkommen, eigene Renten, bestimmte Kapitalerträge) wird angerechnet, kein reines Vermögen wie Sparguthaben oder Immobilienbesitz."]
+  ];
+  const faqContainer = document.getElementById('faq-container');
+  FAQ_ITEMS.forEach(([q, a]) => {
+    const el = document.createElement('details');
+    el.className = 'faq-item';
+    el.innerHTML = `<summary>${q}</summary><p>${a}</p>`;
+    faqContainer.appendChild(el);
+  });
+</script>
+</body>
+</html>
