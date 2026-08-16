@@ -79,6 +79,7 @@
 <div class="container">
 
   <h2>Regelaltersgrenze nach Geburtsjahr (§§ 35, 235 SGB VI)</h2>
+  <p style="font-size:0.9rem;line-height:2;">Eigene Seite pro Jahrgang mit allen Details: <a href="/geburtsjahr-1947-rente/">1947</a> · <a href="/geburtsjahr-1948-rente/">1948</a> · <a href="/geburtsjahr-1949-rente/">1949</a> · <a href="/geburtsjahr-1950-rente/">1950</a> · <a href="/geburtsjahr-1951-rente/">1951</a> · <a href="/geburtsjahr-1952-rente/">1952</a> · <a href="/geburtsjahr-1953-rente/">1953</a> · <a href="/geburtsjahr-1954-rente/">1954</a> · <a href="/geburtsjahr-1955-rente/">1955</a> · <a href="/geburtsjahr-1956-rente/">1956</a> · <a href="/geburtsjahr-1957-rente/">1957</a> · <a href="/geburtsjahr-1958-rente/">1958</a> · <a href="/geburtsjahr-1959-rente/">1959</a> · <a href="/geburtsjahr-1960-rente/">1960</a> · <a href="/geburtsjahr-1961-rente/">1961</a> · <a href="/geburtsjahr-1962-rente/">1962</a> · <a href="/geburtsjahr-1963-rente/">1963</a> · <a href="/geburtsjahr-ab-1964-rente/">ab 1964</a></p>
   <div class="table-wrap">
   <table class="rate-table">
     <thead><tr><th>Geburtsjahr</th><th>Regelaltersgrenze</th><th>Rente mit 63 (45 Beitragsjahre, abschlagsfrei)</th></tr></thead>
@@ -119,7 +120,8 @@
     const label = y === 1964 ? 'ab 1964' : y;
     const tr = document.createElement('tr');
     if (y === 1964) tr.className = 'highlight';
-    tr.innerHTML = `<td>${label}</td><td>${fmtAge(regelaltersgrenze(y))}</td><td>${fmtAge(rente63Alter(y))}</td>`;
+    const linkSlug = y === 1964 ? 'geburtsjahr-ab-1964-rente' : `geburtsjahr-${y}-rente`;
+    tr.innerHTML = `<td><a href="/${linkSlug}/">${label}</a></td><td>${fmtAge(regelaltersgrenze(y))}</td><td>${fmtAge(rente63Alter(y))}</td>`;
     tbody.appendChild(tr);
   }
 
