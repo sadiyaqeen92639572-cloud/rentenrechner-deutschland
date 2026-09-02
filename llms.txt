@@ -53,6 +53,32 @@ Selbstständige mit freiwilliger/pflichtiger GRV-Versicherung (§ 2, § 7 SGB VI
 - Vollständige progressive Einkommensteuer-Zonenformel (der Rechner nutzt einen vereinfachten Näherungssatz, keine exakte Veranlagung)
 - Betriebsrenten-KVdR-Freibetrag im Detail (eigene Seite /betriebsrente/, Forschung teilweise offen — siehe research/sourcing-tracker.csv)
 
+## Seitenübersicht
+
+Themenseiten:
+- https://rentenrechner-deutschland.com/ — Haupt-Rentenrechner
+- https://rentenrechner-deutschland.com/brutto-netto/ — Brutto- in Nettorente
+- https://rentenrechner-deutschland.com/netto/ — Nettorente
+- https://rentenrechner-deutschland.com/steuern/ — Rentenbesteuerung
+- https://rentenrechner-deutschland.com/tabelle/ — Rententabelle
+- https://rentenrechner-deutschland.com/drv-vergleich/ — Vergleich mit DRV-Renteninformation
+- https://rentenrechner-deutschland.com/rente-mit-63/ — abschlagsfrei, 45 Beitragsjahre (§ 38 SGB VI)
+- https://rentenrechner-deutschland.com/fruehrente/ — 35 Beitragsjahre mit Abschlag (§ 36 SGB VI)
+- https://rentenrechner-deutschland.com/rentenpunkte/ — Entgeltpunkte & Rentenformel
+- https://rentenrechner-deutschland.com/rentenluecke/ — Rentenlücke
+- https://rentenrechner-deutschland.com/witwenrente/ — Witwen-/Witwerrente
+- https://rentenrechner-deutschland.com/betriebsrente/ — Betriebsrente / bAV
+- https://rentenrechner-deutschland.com/selbststaendige-beamte/ — Scoping Selbstständige & Beamte
+
+Regelaltersgrenze nach Geburtsjahr (18 Kohorten-Seiten):
+- https://rentenrechner-deutschland.com/geburtsjahr-1947-rente/ … bis …/geburtsjahr-1963-rente/
+- https://rentenrechner-deutschland.com/geburtsjahr-ab-1964-rente/ — Jahrgang 1964 und später (RAG 67)
+
+Rechtliches:
+- https://rentenrechner-deutschland.com/about/
+- https://rentenrechner-deutschland.com/impressum/
+- https://rentenrechner-deutschland.com/privacy/
+
 ## Warnung
 
 Diese Berechnungen sind unverbindliche Schätzungen, keine Steuer- oder Rechtsberatung (§ 2 StBerG). Für eine verbindliche Entscheidung: Steuerberater oder Deutsche Rentenversicherung konsultieren.
