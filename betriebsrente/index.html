@@ -87,6 +87,11 @@
   footer a { color: var(--brand-dark); }
   .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
   .stand-bar strong { color: var(--text); }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+  .cluster-card { display: block; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color .15s; }
+  .cluster-card:hover { border-color: var(--gold); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 0.95rem; margin-bottom: 3px; }
+  .cluster-card span { font-size: 0.83rem; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -134,6 +139,16 @@
 
   <h2>Was dieser Rechner NICHT abbildet</h2>
   <p>Steuerliche Behandlung der Betriebsrente (abhängig vom Durchführungsweg: Direktversicherung, Pensionskasse, Pensionsfonds, Direktzusage, Unterstützungskasse — jeweils unterschiedlich versteuert) sowie Fälle mit mehreren Betriebsrenten (die Freibeträge werden dann zusammengerechnet, nicht pro Vertrag gewährt). Für diese Fälle: Steuerberater oder Krankenkasse konsultieren.</p>
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/brutto-netto/"><strong>Brutto-Netto-Rechner</strong><span>Bruttorente Schritt für Schritt in Netto umrechnen</span></a>
+    <a class="cluster-card" href="/netto/"><strong>Rente Netto</strong><span>Wie viel Netto bleibt von X € Brutto? Mit Beispieltabelle</span></a>
+    <a class="cluster-card" href="/steuern/"><strong>Rentenbesteuerung</strong><span>Besteuerungsanteil nach Rentenbeginnjahr</span></a>
+    <a class="cluster-card" href="/tabelle/"><strong>Rentenrechner Tabelle</strong><span>Regelaltersgrenze nach Geburtsjahr, komplette Tabelle</span></a>
+    <a class="cluster-card" href="/rente-mit-63/"><strong>Rente mit 63</strong><span>Abschlagsfrei mit 45 Beitragsjahren</span></a>
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus Gehalt Entgeltpunkte & Bruttorente schätzen</span></a>
+  </div>
 
   <h2>Häufige Fragen</h2>
   <div id="faq-container"></div>

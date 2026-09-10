@@ -94,6 +94,11 @@
   footer a { color: var(--brand-dark); }
   .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
   .stand-bar strong { color: var(--text); }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+  .cluster-card { display: block; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color .15s; }
+  .cluster-card:hover { border-color: var(--gold); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 0.95rem; margin-bottom: 3px; }
+  .cluster-card span { font-size: 0.83rem; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -151,6 +156,16 @@
   <p><strong>1. Krankenversicherung der Rentner (KVdR):</strong> 7,3% (halber allgemeiner Beitragssatz) + die Hälfte des kassenindividuellen Zusatzbeitrags (Ø 2,9% in 2026, also 1,45% Eigenanteil) = ca. 8,75% der Bruttorente.</p>
   <p><strong>2. Pflegeversicherung:</strong> 3,6% der Bruttorente, komplett vom Rentner getragen. Kinderlose ab 23 Jahren zahlen +0,6 Prozentpunkte = 4,2%.</p>
   <p><strong>3. Einkommensteuer:</strong> nur auf den steuerpflichtigen Anteil der Rente (Besteuerungsanteil, abhängig vom Rentenbeginnjahr — 84% bei Rentenbeginn 2026), und nur wenn das gesamte zu versteuernde Einkommen über dem Grundfreibetrag liegt. Details auf der Seite <a href="/steuern/">Rentenbesteuerung</a>.</p>
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/netto/"><strong>Rente Netto</strong><span>Wie viel Netto bleibt von X € Brutto? Mit Beispieltabelle</span></a>
+    <a class="cluster-card" href="/steuern/"><strong>Rentenbesteuerung</strong><span>Besteuerungsanteil nach Rentenbeginnjahr</span></a>
+    <a class="cluster-card" href="/tabelle/"><strong>Rentenrechner Tabelle</strong><span>Regelaltersgrenze nach Geburtsjahr, komplette Tabelle</span></a>
+    <a class="cluster-card" href="/rente-mit-63/"><strong>Rente mit 63</strong><span>Abschlagsfrei mit 45 Beitragsjahren</span></a>
+    <a class="cluster-card" href="/betriebsrente/"><strong>Rente mit Betriebsrente</strong><span>Sonderfall KVdR-Freibetrag</span></a>
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus Gehalt Entgeltpunkte & Bruttorente schätzen</span></a>
+  </div>
 
   <h2>Häufige Fragen</h2>
   <div id="faq-container"></div>

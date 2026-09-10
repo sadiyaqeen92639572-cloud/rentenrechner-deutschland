@@ -57,7 +57,7 @@ const CSS = `
   .source-note { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
 `;
 
-function page({ slug, title, metaDesc, h1, intro, geburtsjahrLabel, regel, rente63, bodyExtra, faqs }) {
+function page({ slug, title, metaDesc, h1, intro, geburtsjahrLabel, regel, rente63, bodyExtra, faqs, prevSlug, prevLabel, nextSlug, nextLabel }) {
   const canonical = `${DOMAIN}/${slug}/`;
   const faqJsonLd = faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } }));
   return `<!DOCTYPE html>
@@ -112,9 +112,16 @@ ${JSON.stringify({
     ${faqs.map(([q, a]) => `<details class="faq-item"><summary>${q}</summary><p>${a}</p></details>`).join('\n    ')}
   </div>
 
+  <h2>Andere Geburtsjahrgänge</h2>
+  <div class="related-grid">
+    ${prevSlug ? `<a href="/${prevSlug}/">← Jahrgang ${prevLabel}</a>` : ''}
+    ${nextSlug ? `<a href="/${nextSlug}/">Jahrgang ${nextLabel} →</a>` : ''}
+    <a href="/tabelle/">Alle Jahrgänge (Tabelle)</a>
+  </div>
+
   <h2>Weitere Rentenrechner in diesem Cluster</h2>
   <div class="related-grid">
-    <a href="/tabelle/">Vollständige Tabelle</a>
+    <a href="/">Rentenrechner (Start)</a>
     <a href="/rente-mit-63/">Rente mit 63</a>
     <a href="/rentenpunkte/">Rentenpunkte-Rechner</a>
     <a href="/brutto-netto/">Brutto-Netto-Rechner</a>
@@ -180,6 +187,15 @@ for (let y = 1947; y <= 1963; y++) {
     ]
   });
 }
+
+// Wire lateral prev/next links between consecutive cohort pages (PAGES is already in ascending order).
+const labelOf = (p) => `${p.geburtsjahrLabel}`.startsWith('ab') ? 'ab 1964' : `${p.geburtsjahrLabel}`;
+PAGES.forEach((p, i) => {
+  const prev = PAGES[i - 1];
+  const next = PAGES[i + 1];
+  if (prev) { p.prevSlug = prev.slug; p.prevLabel = labelOf(prev); }
+  if (next) { p.nextSlug = next.slug; p.nextLabel = labelOf(next); }
+});
 
 for (const p of PAGES) {
   const dir = path.join(__dirname, p.slug);

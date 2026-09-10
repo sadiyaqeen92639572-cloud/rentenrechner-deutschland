@@ -33,7 +33,10 @@
       "mainEntity": [
         { "@type": "Question", "name": "1000 Euro Rente brutto — wieviel netto bleibt?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 1000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 876,50€ netto (KVdR ca. 87,50€, Pflegeversicherung 36€, keine Steuer da der steuerpflichtige Anteil unter dem Grundfreibetrag liegt). Der genaue Betrag hängt von deinem Gesamteinkommen ab — Beispielrechnung, keine individuelle Steuerberatung." } },
         { "@type": "Question", "name": "Ist bei niedriger Rente überhaupt Steuer fällig?", "acceptedAnswer": { "@type": "Answer", "text": "Meist nein, wenn keine weiteren Einkünfte vorliegen: der steuerpflichtige Anteil einer 1000-1500€ Rente liegt oft unter dem Grundfreibetrag (2026: ca. 12.348€/Jahr bzw. 1.029€/Monat). Bei höheren Renten oder zusätzlichen Einkünften (Vermietung, weitere Rente, Kapitalerträge) kann Steuer anfallen." } },
-        { "@type": "Question", "name": "Wie viel Netto bleibt bei 2000€ Brutto-Rente?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 2000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.660€ netto nach KVdR (~175€), Pflegeversicherung (72€) und Steuerschätzung. Nutze den Rechner oben für deine exakten Parameter." } }
+        { "@type": "Question", "name": "Wie viel Netto bleibt bei 2000€ Brutto-Rente?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 2000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.660€ netto nach KVdR (~175€), Pflegeversicherung (72€) und Steuerschätzung. Nutze den Rechner oben für deine exakten Parameter." } },
+        { "@type": "Question", "name": "1500 Euro Rente brutto — wieviel netto?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 1500€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.282€ netto — KVdR ca. 131€, Pflegeversicherung 54€, Steuerschätzung rund 32€. Ohne weitere Einkünfte kann die Steuer auch ganz entfallen." } },
+        { "@type": "Question", "name": "1700 Euro Rente brutto — wieviel netto?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 1700€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.434€ netto — KVdR ca. 149€, Pflegeversicherung 61€, Steuerschätzung rund 56€. Beispielrechnung bei alleinigem Rentenbezug." } },
+        { "@type": "Question", "name": "1800 Euro Rente brutto — wieviel netto?", "acceptedAnswer": { "@type": "Answer", "text": "Bei 1800€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.510€ netto — KVdR ca. 158€, Pflegeversicherung 65€, Steuerschätzung rund 68€. Für deine exakten Parameter nutze den Rechner oben." } }
       ]
     },
     {
@@ -94,6 +97,11 @@
   footer a { color: var(--brand-dark); }
   .stand-bar { font-size: 0.82rem; color: var(--muted); padding: 10px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
   .stand-bar strong { color: var(--text); }
+  .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+  .cluster-card { display: block; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color .15s; }
+  .cluster-card:hover { border-color: var(--gold); }
+  .cluster-card strong { display: block; color: var(--brand-dark); font-size: 0.95rem; margin-bottom: 3px; }
+  .cluster-card span { font-size: 0.83rem; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -140,6 +148,7 @@
   <div class="stand-bar"><strong>Stand: 1. August 2026.</strong> Rechtsgrundlage: § 22 Nr. 1 EStG · § 55 SGB XI · § 2 StBerG. Quellen, Sourcing-Log und Methodik: <a href="/about/">siehe Methodik & Quellen</a>.</div>
 
   <h2>Beispieltabelle: Brutto → Netto (Rentenbeginn 2026, gesetzlich versichert, mit Kind)</h2>
+  <p>Wie viel Netto bleibt von 1000 €, 1500 €, 1700 €, 2000 € oder 2500 € Brutto-Rente? Die Tabelle zeigt für jede Bruttorente von 900 € bis 3000 € den geschätzten Nettobetrag nach Krankenversicherung der Rentner (KVdR), Pflegeversicherung und Steuerschätzung (Rentenbeginn 2026).</p>
   <div class="table-wrap">
   <table class="rate-table">
     <thead><tr><th>Brutto/Monat</th><th>KVdR</th><th>Pflege</th><th>Steuer (Schätzung)</th><th>Netto ca.</th></tr></thead>
@@ -147,6 +156,16 @@
   </table>
   </div>
   <p style="font-size:0.85rem;color:var(--muted);">Beispielrechnung bei alleinigem Rentenbezug ohne weitere Einkünfte — bei zusätzlichem Einkommen fällt die Steuer höher aus. Kein Ersatz für eine individuelle Berechnung.</p>
+
+  <h2>Weitere Rentenrechner in diesem Cluster</h2>
+  <div class="cluster-grid">
+    <a class="cluster-card" href="/brutto-netto/"><strong>Brutto-Netto-Rechner</strong><span>Bruttorente Schritt für Schritt in Netto umrechnen</span></a>
+    <a class="cluster-card" href="/steuern/"><strong>Rentenbesteuerung</strong><span>Besteuerungsanteil nach Rentenbeginnjahr</span></a>
+    <a class="cluster-card" href="/tabelle/"><strong>Rentenrechner Tabelle</strong><span>Regelaltersgrenze nach Geburtsjahr, komplette Tabelle</span></a>
+    <a class="cluster-card" href="/rente-mit-63/"><strong>Rente mit 63</strong><span>Abschlagsfrei mit 45 Beitragsjahren</span></a>
+    <a class="cluster-card" href="/betriebsrente/"><strong>Rente mit Betriebsrente</strong><span>Sonderfall KVdR-Freibetrag</span></a>
+    <a class="cluster-card" href="/rentenpunkte/"><strong>Rentenpunkte-Rechner</strong><span>Aus Gehalt Entgeltpunkte & Bruttorente schätzen</span></a>
+  </div>
 
   <h2>Häufige Fragen</h2>
   <div id="faq-container"></div>
@@ -196,7 +215,7 @@
   }
 
   // Beispieltabelle
-  const examples = [500, 1000, 1500, 2000, 2500, 3000];
+  const examples = Array.from({ length: 22 }, (_, i) => 900 + i * 100);
   const tbody = document.getElementById('example-table');
   examples.forEach(b => {
     const r = nettoBerechnen(b, 2026, true);
@@ -208,7 +227,10 @@
   const FAQ_ITEMS = [
     ["1000 Euro Rente brutto — wieviel netto bleibt?", "Bei 1000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 876,50€ netto (KVdR ca. 87,50€, Pflegeversicherung 36€, keine Steuer da der steuerpflichtige Anteil unter dem Grundfreibetrag liegt). Der genaue Betrag hängt von deinem Gesamteinkommen ab — Beispielrechnung, keine individuelle Steuerberatung."],
     ["Ist bei niedriger Rente überhaupt Steuer fällig?", "Meist nein, wenn keine weiteren Einkünfte vorliegen: der steuerpflichtige Anteil einer 1000-1500€ Rente liegt oft unter dem Grundfreibetrag (2026: ca. 12.348€/Jahr bzw. 1.029€/Monat). Bei höheren Renten oder zusätzlichen Einkünften (Vermietung, weitere Rente, Kapitalerträge) kann Steuer anfallen."],
-    ["Wie viel Netto bleibt bei 2000€ Brutto-Rente?", "Bei 2000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.660€ netto nach KVdR (~175€), Pflegeversicherung (72€) und Steuerschätzung. Nutze den Rechner oben für deine exakten Parameter."]
+    ["Wie viel Netto bleibt bei 2000€ Brutto-Rente?", "Bei 2000€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.660€ netto nach KVdR (~175€), Pflegeversicherung (72€) und Steuerschätzung. Nutze den Rechner oben für deine exakten Parameter."],
+    ["1500 Euro Rente brutto — wieviel netto?", "Bei 1500€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.282€ netto — KVdR ca. 131€, Pflegeversicherung 54€, Steuerschätzung rund 32€. Ohne weitere Einkünfte kann die Steuer auch ganz entfallen; der Rechner oben und die Beispieltabelle zeigen die Bandbreite."],
+    ["1700 Euro Rente brutto — wieviel netto?", "Bei 1700€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.434€ netto — KVdR ca. 149€, Pflegeversicherung 61€, Steuerschätzung rund 56€. Beispielrechnung bei alleinigem Rentenbezug; bei zusätzlichem Einkommen fällt die Steuer höher aus."],
+    ["1800 Euro Rente brutto — wieviel netto?", "Bei 1800€ Brutto, gesetzlich krankenversichert, mit Kind(ern), Rentenbeginn 2026: ca. 1.510€ netto — KVdR ca. 158€, Pflegeversicherung 65€, Steuerschätzung rund 68€. Für deine exakten Parameter (Kinderlosenzuschlag, Rentenbeginnjahr) nutze den Rechner oben."]
   ];
   const faqContainer = document.getElementById('faq-container');
   FAQ_ITEMS.forEach(([q, a]) => {
