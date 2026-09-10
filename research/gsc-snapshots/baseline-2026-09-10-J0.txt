@@ -1,0 +1,39 @@
+=== BASELINE 2026-09-10 (J0) rentenrechner-deutschland.com ===
+--- totals 90d ---
+clicks=1 impressions=1130 ctr=0.09% avg_pos=63.6
+--- totals 28d ---
+clicks=1 impressions=1057 ctr=0.09% avg_pos=62.4
+--- pages 90d ---
+    0 clicks     768 impr  pos  85.9  ctr   0.0%  https://rentenrechner-deutschland.com/
+    1 clicks      78 impr  pos  30.1  ctr   1.3%  https://rentenrechner-deutschland.com/geburtsjahr-1956-rente/
+    0 clicks      72 impr  pos   9.8  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1952-rente/
+    0 clicks      62 impr  pos   8.8  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1949-rente/
+    0 clicks      60 impr  pos  31.9  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1959-rente/
+    0 clicks      58 impr  pos  16.3  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1954-rente/
+    0 clicks      38 impr  pos   9.8  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1950-rente/
+    0 clicks       5 impr  pos   9.0  ctr   0.0%  https://rentenrechner-deutschland.com/geburtsjahr-1953-rente/
+
+total indexed-with-data pages: 8
+--- queries 90d ---
+=== top opportunity queries (high impr, low clicks, pos < 30) ===
+     7 impr  pos   9.9  ctr  0.0%  jahrgang 1952 wann in rente
+     6 impr  pos  22.8  ctr  0.0%  rentenbeginn jahrgang 1956
+     3 impr  pos   9.3  ctr  0.0%  jahrgang 1949 wann in rente
+     3 impr  pos  16.0  ctr  0.0%  rente mit 63 jahrgang 1956
+     3 impr  pos  24.7  ctr  0.0%  rentenbeginn jahrgang 1954
+     2 impr  pos  23.0  ctr  0.0%  frührente berechnen
+     2 impr  pos  11.0  ctr  0.0%  rente 1956 geboren
+     2 impr  pos  23.5  ctr  0.0%  rente mit 63 jahrgang 1959
+     2 impr  pos  13.0  ctr  0.0%  rentenbeginn jahrgang 1952
+     2 impr  pos  25.5  ctr  0.0%  rentenpunkte rechner
+     1 impr  pos  11.0  ctr  0.0%  geburtsjahr 1959 wann in rente
+     1 impr  pos  11.0  ctr  0.0%  jahrgang 1953 wann in rente
+     1 impr  pos  14.0  ctr  0.0%  netto rechner rente
+     1 impr  pos  16.0  ctr  0.0%  rechner rente
+     1 impr  pos  11.0  ctr  0.0%  regelaltersgrenze berechnen
+     1 impr  pos  18.0  ctr  0.0%  regelaltersrente jahrgang 1954
+     1 impr  pos  16.0  ctr  0.0%  rente deutschland berechnen
+     1 impr  pos  27.0  ctr  0.0%  renteneintritt jahrgang 1956
+     1 impr  pos  28.0  ctr  0.0%  rentenrechner rentenversicherung
+
+total queries: 228  |  zero-click-but-rankable: 19
